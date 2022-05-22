@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 1000px;
+  max-width: 1680px;
+  margin: auto;
+  font-family: "Open Sans", sans-serif;
+  color: #fff;
+}
+
+/*---------------------------------------------------*/
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  height: 100vh;
+  width: 100%;
+  max-width: 1680px;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, .5);
+  transition: 1s;
+  padding: 0 100px;
+}
+
+.header_scrolled {
+  height: 100px;
+}
+
+/*---------------------------------------------------*/
+
+.header__title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 1s;
+  font-size: 7.3rem;
+  letter-spacing: .8rem;
+}
+
+.header__title_scrolled {
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 3rem;
+  letter-spacing: .8rem;
+  transition: 1s;
+
+}
+
+/*---------------------------------------------------*/
+.glowing-letters {
+  display: inline-flex;
+  font-family: "Bebas Neue";
+}
+
+.glowing-letters__letter {
+  color: #fff;
+  animation: animate 3s linear infinite;
+  animation-delay: calc(.1s * var(--i));
+}
+
+.glowing-letters__letter_scrolled {
+  color: #08fdd8;
+  animation: none;
+}
+
+.glowing-letters__letter:nth-child(1) {
+  --i: 1;
+}
+
+.glowing-letters__letter:nth-child(2) {
+  --i: 2;
+}
+
+.glowing-letters__letter:nth-child(3) {
+  --i: 3;
+}
+
+.glowing-letters__letter:nth-child(4) {
+  --i: 4;
+}
+
+.glowing-letters__letter:nth-child(5) {
+  --i: 5;
+}
+
+.glowing-letters__letter:nth-child(6) {
+  --i: 6;
+}
+
+.glowing-letters__letter:nth-child(7) {
+  margin: 0 0 0 20px;
+  --i: 7;
+}
+
+.glowing-letters__letter:nth-child(8) {
+  --i: 8;
+}
+
+.glowing-letters__letter:nth-child(9) {
+  --i: 9;
+}
+
+.glowing-letters__letter:nth-child(10) {
+  --i: 10;
+}
+
+.glowing-letters__letter:nth-child(11) {
+  --i: 11;
+}
+
+.glowing-letters__letter:nth-child(12) {
+  --i: 12;
+}
+
+.glowing-letters__letter:nth-child(13) {
+  --i: 13;
+}
+
+@keyframes animate {
+  0% {
+    color: #fff;
+    filter: blur(1px) hue-rotate(0deg);
+    text-shadow:
+      0 0 10px #08fdd8,
+      0 0 20px #08fdd8,
+      0 0 40px #08fdd8,
+      0 0 80px #08fdd8;
+     
+  }
+
+  30%,
+  70% {
+    color: #fff;
+    filter: blur(1px) hue-rotate(360deg);
+    text-shadow:
+      0 0 10px #08fdd8,
+      0 0 20px #08fdd8,
+      0 0 40px #08fdd8,
+      0 0 80px #08fdd8;
+      
+  }
+
+  100% {
+    color: transperent;
+    box-shadow: none;
+    filter: blur(1px) hue-rotate(0deg);
+  }
+}
+
+/*---------------------------------------------------*/
+
+.main {
+  /* padding: 300px 0 0 0; */
+}
+
+/*---------------------------------------------------*/
+
+.intro {
+  background: #1d1d1d;
+  padding: 300px 0 100px 0;
+}
+
+.intro__container {
+  max-width: 70vw;
+  margin: auto;
+  display: flex;
+}
+
+.intro__left-col {
+  flex: 0 0 50%;
+}
+
+.intro__right-col {
+  flex: 0 0 50%;
+}
+
+.intro__title {
+  font-family: "Bebas Neue";
+  color: #08fdd8;
+  font-size: 7.3rem;
+  line-height: 6.7rem;
+}
