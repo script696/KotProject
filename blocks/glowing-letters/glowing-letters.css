@@ -1,0 +1,115 @@
+@keyframes animate {
+  0% {
+    color: transperent;
+    box-shadow: none;
+    /* filter: blur(2px); */
+  }
+
+  30%,
+  70% {
+    color: #fff;
+    /* filter: blur(2px); */
+    text-shadow:
+      0 0 10px var(--color-glowing-text),
+      0 0 20px var(--color-glowing-text),
+      0 0 40px var(--color-glowing-text),
+      0 0 80px var(--color-glowing-text),
+      0 0 100px var(--color-glowing-text),
+      0 0 120px var(--color-glowing-text);
+  }
+
+  100% {
+    color: #fff;
+    /* filter: blur(2px); */
+    text-shadow:
+    0 0 10px var(--color-glowing-text),
+    0 0 20px var(--color-glowing-text),
+    0 0 40px var(--color-glowing-text),
+    0 0 80px var(--color-glowing-text),
+    0 0 100px var(--color-glowing-text),
+    0 0 120px var(--color-glowing-text);
+  }
+  
+}
+
+.glowing-letters {
+  display: inline-flex;
+  font-family: var(--second-font);
+}
+
+.glowing-letters__letter {
+  color: var(--color-glowing-text);
+  /* animation: animate 2s  linear infinite alternate-reverse; */
+  animation-delay: calc(.1s * var(--i));
+  font-size: 7.3rem;
+  letter-spacing: .8rem;
+  transition: 1s;
+}
+.glowing-letters:hover .glowing-letters__letter{
+  animation: animate 2s  linear infinite alternate-reverse;
+  animation-delay: calc(.1s * var(--i));
+
+}
+.glowing-letters__letter_scrolled {
+  color: var(--color-glowing-text);
+  animation: none;
+  font-size: 2rem;
+  letter-spacing: .2rem;
+  transition: 1s;
+
+}
+
+.glowing-letters__letter:nth-child(1) {
+  --i: 1;
+}
+
+.glowing-letters__letter:nth-child(2) {
+  --i: 2;
+}
+
+.glowing-letters__letter:nth-child(3) {
+  --i: 3;
+}
+
+.glowing-letters__letter:nth-child(4) {
+  --i: 4;
+}
+
+.glowing-letters__letter:nth-child(5) {
+  --i: 5;
+}
+
+.glowing-letters__letter:nth-child(6) {
+  --i: 6;
+}
+
+.glowing-letters__letter:nth-child(7) {
+  margin: 0 0 0 20px;
+  --i: 7;
+}
+
+.glowing-letters__letter:nth-child(8) {
+  --i: 8;
+}
+
+.glowing-letters__letter:nth-child(9) {
+  --i: 9;
+}
+
+.glowing-letters__letter:nth-child(10) {
+  --i: 10;
+}
+
+.glowing-letters__letter:nth-child(11) {
+  --i: 11;
+}
+
+.glowing-letters__letter:nth-child(12) {
+  --i: 12;
+}
+
+.glowing-letters__letter:nth-child(13) {
+  --i: 13;
+}
+
+
