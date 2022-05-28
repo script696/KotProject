@@ -1,5 +1,6 @@
 .header {
   position: fixed;
+  z-index: 999;
   top: 0;
   left: 50%;
   height: 100vh;
@@ -13,16 +14,21 @@
   transition: 1s;
   padding: 0 100px;
 }
+
 .header_scrolled {
   height: 100px;
-  background: rgba(0,0,0,.7);
+  background: rgba(0, 0, 0, .7);
 }
 
-.header__nav{
+.header__nav {
+  flex: 1 1 auto;
   opacity: 0;
   visibility: hidden;
+  display: flex;
+  justify-content: flex-end;
 }
-.header__nav_scrolled{
+
+.header__nav_scrolled {
   opacity: 1;
   visibility: visible;
 }
@@ -45,21 +51,22 @@
   position: relative;
   top: 50%;
   left: 0;
-  transform: translateY(-60%);
+  transform: translateY(-130%);
   transition: 1s;
 
 }
 
 .header__text {
   font-family: "Playfair Display";
-  font-weight: 900;
-  font-size: 3rem;
+  font-weight: 800;
+  font-size: 2.5rem;
 }
-.header__text_scrolled{
+
+.header__text_scrolled {
   display: none;
 }
 
-.header__text_color_pink{
+.header__text_color_pink {
   color: #fff;
   font-weight: 800;
   /* text-shadow:
@@ -69,7 +76,7 @@
       0 0 80px var(--color-glowing-text); */
 }
 
-.header__button-home{
+.header__button-home {
   border: none;
   background: inherit;
   cursor: pointer;

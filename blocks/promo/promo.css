@@ -1,12 +1,13 @@
-.portfolio{
-  height: 1000px;
+.promo{
+  min-height: 1000px;
+  background: var(--color-second);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.portfolio:before {
+.promo:before {
   content: attr(id);
-  color: #000;
+  color: #fff;
   font-size: 8rem;
 }

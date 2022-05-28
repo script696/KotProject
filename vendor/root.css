@@ -1,0 +1,12 @@
+:root{
+  --main-font: "Playfair Display";
+  --second-font: "Bebas Neue";
+
+  --color-main: #0b472d;
+  --color-second: #1c1b20;
+  --color-third: #fff;
+
+  --color-main-text: #1c1b20;
+  --color-alternate-text: #fff;
+  --color-glowing-text: #2c604a;
+}

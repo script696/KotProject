@@ -6,22 +6,20 @@
 
 @import url("../vendor/normalize.css");
 
+@import url("../vendor/root.css");
 @import url("../blocks/body/body.css");
 @import url("../blocks/header/header.css");
-@import url("../blocks/intro/intro.css");
+@import url("../blocks/about/about.css");
 @import url("../blocks/navigation/navigation.css");
 @import url("../blocks/portfolio/portfolio.css");
+@import url("../blocks/promo/promo.css");
+@import url("../blocks/contact-me/contact-me.css");
 @import url("../blocks/glowing-letters/glowing-letters.css");
 
-:root{
-  --main-font: "Playfair Display";
-  --second-font: "Bebas Neue";
-  --color-main: #0b472d;
-  --color-second: #000000;
-  --color-glowing-text: #2c604a;
-}
+
 
 /* #fd2155
 green #2a7052 #265642
 black #1c1b20*/
+
 

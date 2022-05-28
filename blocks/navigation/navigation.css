@@ -1,14 +1,27 @@
-.navigation__list{
-  display: flex;
-  list-style: none;
-  gap: 0 20px;
+.navigation{
+  position: relative;
 }
 
-.navigation__item{
-  color: inherit;
+.navigation__links{
+  display: flex;
+  list-style: none;
+  gap: 0 25px;
+  position: relative;
+}
+
+.navigation__link{
+  color: var(--color-alternate-text);
   text-decoration: none;
   font-size: 1.4rem;
 }
-.navigation__item_active{
-  border-bottom: 2px solid #08fdd8;
+
+.navigation__marker{
+  position: absolute;
+  height: 2.8rem;
+  width: 0;
+  left: 0;
+  top: 50%;
+  transform: translateY(-46%);
+  transition: 0.5s;
+  border: 3px solid var(--color-alternate-text);
 }
