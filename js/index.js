@@ -21,6 +21,13 @@ const aboutTitleUnderline = about.querySelector('.title-about__underline')
 */
 const glowingLetter = document.querySelectorAll('.glowing-letters__letter')
 
+/* flip-card
+*/
+const flipCard = document.querySelector('.flip-card')
+const flipCardFront = document.querySelector('.flip-card__front')
+const flipCardBack = document.querySelector('.flip-card__back')
+
+const test = document.querySelector('body')
 
 /* -----------------------------------------------------------------------------
 */
@@ -30,14 +37,13 @@ const addHeaderFullscreen = () => {
   glowingLetter.forEach(letter => letter.classList.add('glowing-letters__letter_scrolled'))
   headerText.forEach(i => i.classList.add('header__text_scrolled'))
   headerNav.classList.add('header__nav_scrolled')
-  setTimeout(() => {
-    about.scrollIntoView({ block: "start", inline: "nearest" });
-  }, 250)
-
-  about.scrollIntoView({ block: "start", inline: "nearest" });
+  // about.scrollIntoView({ block: "start", inline: "nearest" });
   aboutTitle.classList.add('about__title_scrolled')
   aboutTitleUnderline.classList.add('title-about__underline_scrolled')
 
+  setTimeout(() => {
+    test.classList.add('body_scrolled')
+  }, 200)
 }
 
 const hideHeaderFullscreen = () => {
@@ -46,13 +52,13 @@ const hideHeaderFullscreen = () => {
   glowingLetter.forEach(letter => letter.classList.remove('glowing-letters__letter_scrolled'))
   headerText.forEach(i => i.classList.remove('header__text_scrolled'))
   headerNav.classList.remove('header__nav_scrolled')
+  test.classList.remove('body_scrolled')
+
 }
 
 
-
-window.addEventListener('scroll', () => {
-  const windowScroll = window.scrollY
-  if (windowScroll > 0 && !header.matches('.header_scrolled')) {
+window.addEventListener('wheel', (e) => {
+  if(e.deltaY > 0 && !header.matches('.header_scrolled')){
     addHeaderFullscreen();
   }
 })
@@ -77,11 +83,8 @@ const indicator = (elem) => {
 const cb = (entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
-      console.log(entry.target, entry.isIntersecting, entry.intersectionRatio)
-
 
       let sectionInVisionId = entry.target.id;
-      console.log(entry.target.id)
 
       let activeLink = document.querySelector(
         `.navigation__link[href="#${sectionInVisionId}"]`
@@ -95,5 +98,11 @@ const sectionObserver = new IntersectionObserver(cb, { threshold: [0.2, 0.8] });
 
 document.querySelectorAll('section').forEach(sectionElem => sectionObserver.observe(sectionElem));
 
+/* -----------------------------------------------------------------------------
+*/
 
+flipCard.addEventListener('click', () => {
+  flipCardFront.classList.toggle('flip-card__front_pushed')
+  flipCardBack.classList.toggle('flip-card__back_pushed')
+})
 
