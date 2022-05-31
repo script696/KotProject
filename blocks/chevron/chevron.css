@@ -1,0 +1,26 @@
+@keyframes scroll-down {
+  0% {
+    transform: translate(0, 10px );
+  }
+  
+  100% {
+    transform: translate(0, -10px);
+  }
+}
+
+
+.chevron {
+  height: 50px;
+  width: 50px;
+  transition: bottom 1s ease-in-out;
+  cursor: pointer;
+}
+
+.chevron_active{
+  animation: scroll-down .6s ease-in-out infinite alternate;
+}
+
+.chevron svg {
+  
+  fill: var(--color-third);
+}

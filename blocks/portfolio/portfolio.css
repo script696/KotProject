@@ -1,12 +1,24 @@
 .portfolio{
   height: 1000px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background: var(--color-main);
 }
 
-.portfolio:before {
-  content: attr(id);
-  color: #000;
-  font-size: 8rem;
+
+.portfolio__title{
+  padding: 100px 0 0 0;
+  font-family: "Bebas Neue";
+  color: var(--color-main-text);
+  font-size: 4rem;
+  line-height: 6.7rem;
+  text-align: center;
+}
+
+.portfolio__grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows: 300px;
+  gap: 30px;
+}
+.portfolio-project{
+  background-color: tomato;
 }

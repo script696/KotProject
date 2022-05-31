@@ -11,56 +11,98 @@
 
 <body>
   <header class="header">
-      <div class="header__title">
-        <p class="header__text">Hello, i`am</p>
-        <button class="header__button-home" type="button">
-          <h1 class="glowing-letters">
-            <span class="glowing-letters__letter">N</span>
-            <span class="glowing-letters__letter">i</span>
-            <span class="glowing-letters__letter">k</span>
-            <span class="glowing-letters__letter">i</span>
-            <span class="glowing-letters__letter">t</span>
-            <span class="glowing-letters__letter">a</span>
-            <span class="glowing-letters__letter">S</span>
-            <span class="glowing-letters__letter">e</span>
-            <span class="glowing-letters__letter">m</span>
-            <span class="glowing-letters__letter">e</span>
-            <span class="glowing-letters__letter">n</span>
-            <span class="glowing-letters__letter">o</span>
-            <span class="glowing-letters__letter">v</span>
-          </h1>
-        </button>
-        <p class="header__text">Nowadays i`m studing</p>
-        <p class="header__text">But soon i`ll be a <span class="header__text_color_pink">Web Developer</span><span
-            class="test">.</span>
-        </p>
-      </div>
+    <div class="header__title">
+      <p class="header__text">Hello, i`am</p>
+      <button class="header__button-home" type="button">
+        <h1 class="glowing-letters">
+          <span class="glowing-letters__letter">N</span>
+          <span class="glowing-letters__letter">i</span>
+          <span class="glowing-letters__letter">k</span>
+          <span class="glowing-letters__letter">i</span>
+          <span class="glowing-letters__letter">t</span>
+          <span class="glowing-letters__letter">a</span>
+          <span class="glowing-letters__letter">S</span>
+          <span class="glowing-letters__letter">e</span>
+          <span class="glowing-letters__letter">m</span>
+          <span class="glowing-letters__letter">e</span>
+          <span class="glowing-letters__letter">n</span>
+          <span class="glowing-letters__letter">o</span>
+          <span class="glowing-letters__letter">v</span>
+        </h1>
+      </button>
+      <p class="header__text">Nowadays i`m studing</p>
+      <p class="header__text">But soon i`ll be a <span class="header__text_color_pink">Web Developer</span><span
+          class="test">.</span>
+      </p>
+    </div>
 
-      <nav class="header__nav navigation">
-        <ul class="navigation__links">
-          <div class="navigation__marker"></div>
-          <li>
-            <a href="#section-about" class="navigation__link">
-              <span class="navigation__link-text">About</span>
-            </a>
-          </li>
-          <li>
-            <a href="#portfolio" class="navigation__link">
-              <span class="navigation__link-text">Portfolio</span>
-            </a>
-          </li>
-          <li>
-            <a href="#promo" class="navigation__link">
-              <span class="navigation__link-text">Promo</span>
-            </a>
-          </li>
-          <li>
-            <a href="#contact-me" class="navigation__link">
-              <span class="navigation__link-text">Contact Me</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
+    <nav class="header__nav navigation">
+      <ul class="navigation__links">
+        <div class="navigation__marker"></div>
+        <li>
+          <a href="#section-about" class="navigation__link">
+            <span class="navigation__link-text">About</span>
+          </a>
+        </li>
+        <li>
+          <a href="#portfolio" class="navigation__link">
+            <span class="navigation__link-text">Portfolio</span>
+          </a>
+        </li>
+        <li>
+          <a href="#promo" class="navigation__link">
+            <span class="navigation__link-text">Promo</span>
+          </a>
+        </li>
+        <li>
+          <a href="#contact-me" class="navigation__link">
+            <span class="navigation__link-text">Contact Me</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="header__scroll-marker">
+      <p>scroll down to see more</p>
+      <div class="chevron chevron_active">
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          x="0px" y="0px" viewBox="0 0 330.001 330.001" style="enable-background:new 0 0 330.001 330.001;"
+          xml:space="preserve">
+          <path d="M328.859,84.26C326.537,78.655,321.067,75,315,75H15c-6.067,0-11.537,3.655-13.858,9.26
+       c-2.321,5.605-1.038,12.057,3.252,16.347l150,150C157.323,253.536,161.161,255,165,255s7.678-1.464,10.606-4.394l150-150
+       C329.897,96.317,331.18,89.865,328.859,84.26z M165,218.787L51.214,105h227.573L165,218.787z" />
+          <g>
+          </g>
+          <g>
+          </g>
+          <g>
+          </g>
+          <g>
+          </g>
+          <g>
+          </g>
+          <g>
+          </g>
+          <g>
+          </g>
+          <g>
+          </g>
+          <g>
+          </g>
+          <g>
+          </g>
+          <g>
+          </g>
+          <g>
+          </g>
+          <g>
+          </g>
+          <g>
+          </g>
+          <g>
+          </g>
+        </svg>
+      </div>
+    </div>
   </header>
   <main class="main">
     <section id="section-about" class="about">
@@ -108,7 +150,14 @@
         </div>
       </div>
     </section>
-    <section id="portfolio" class="portfolio"></section>
+    <section id="portfolio" class="portfolio">
+      <h2 class="portfolio__title">This is my recent projects</h2>
+      <div class="portfolio__grid">
+        <div class="portfolio-project"></div>
+        <div class="portfolio-project"></div>
+        <div class="portfolio-project"></div>
+      </div>
+    </section>
     <section id="promo" class="promo">promo</section>
     <section id="contact-me" class="contact-me"></section>
   </main>

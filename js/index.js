@@ -28,6 +28,11 @@ const flipCardFront = document.querySelector('.flip-card__front')
 const flipCardBack = document.querySelector('.flip-card__back')
 
 const test = document.querySelector('body')
+/* chevron
+*/
+const chevron = document.querySelector('.chevron')
+
+
 
 /* -----------------------------------------------------------------------------
 */
@@ -106,3 +111,4 @@ flipCard.addEventListener('click', () => {
   flipCardBack.classList.toggle('flip-card__back_pushed')
 })
 
+chevron.addEventListener('click', addHeaderFullscreen)

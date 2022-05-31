@@ -1,6 +1,6 @@
 .promo{
   min-height: 1000px;
-  background: var(--color-second);
+  background: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
