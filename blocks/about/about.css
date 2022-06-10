@@ -4,7 +4,7 @@
 }
 
 .about__container {
-  max-width: 90%;
+  max-width: 1280px;
   margin: auto;
   display: flex;
 }
@@ -21,7 +21,7 @@
 }
 
 .about__left-col {
-  padding: 200px 0 0 0;
+  padding: 100px 0 0 0;
   flex: 0 0 50%;
 }
 

@@ -1,6 +1,6 @@
 .promo{
   min-height: 1000px;
-  background: #fff;
+  background: url('../../img/background.jpg') center / cover no-repeat fixed;
   display: flex;
   justify-content: center;
   align-items: center;

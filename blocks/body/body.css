@@ -8,14 +8,14 @@ html {
 }
 body {
   min-height: 1000px;
-  max-width: 1680px;
+  /* max-width: 1680px; */
   margin: auto;
   font-family: var(--main-font), sans-serif;
   color: var(--color-main-text);
-  overflow-x: hidden;
-  overflow-y: hidden;
+  overflow-x: hidden; 
+  overflow-y: hidden; 
 }
 
 .body_scrolled{
-  overflow-y: visible;
+  overflow-y: auto;
 }

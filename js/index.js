@@ -89,6 +89,7 @@ const cb = (entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
 
+      console.log(entry.target)
       let sectionInVisionId = entry.target.id;
 
       let activeLink = document.querySelector(
@@ -99,9 +100,19 @@ const cb = (entries) => {
   });
 };
 
+const handleProjectMasc = (entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+     entry.target.classList.add('project__insight-mask_deactivate')
+    }
+  });
+}
+
 const sectionObserver = new IntersectionObserver(cb, { threshold: [0.2, 0.8] });
+const projectObserver = new IntersectionObserver(handleProjectMasc, { threshold: [0.3] });
 
 document.querySelectorAll('section').forEach(sectionElem => sectionObserver.observe(sectionElem));
+document.querySelectorAll('.project__insight-mask').forEach(project => projectObserver.observe(project));
 
 /* -----------------------------------------------------------------------------
 */
