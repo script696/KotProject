@@ -5,6 +5,7 @@ const headerTitle = header.querySelector('.header__title')
 const headerText = header.querySelectorAll('.header__text')
 const headerNav = header.querySelector('.header__nav')
 const headerButton = header.querySelector('.header__button-home')
+const videoMasc = header.querySelector('.header__background')
 
 /* navigation Elements
 */
@@ -32,8 +33,11 @@ const test = document.querySelector('body')
 */
 const chevron = document.querySelector('.chevron')
 
+/* popup
+*/
 
-
+const popup = document.querySelector('.popup')
+const popupOpenButton = document.querySelector('.project__popup-open')
 /* -----------------------------------------------------------------------------
 */
 const addHeaderFullscreen = () => {
@@ -45,6 +49,7 @@ const addHeaderFullscreen = () => {
   // about.scrollIntoView({ block: "start", inline: "nearest" });
   aboutTitle.classList.add('about__title_scrolled')
   aboutTitleUnderline.classList.add('title-about__underline_scrolled')
+  videoMasc.classList.add('header__background_scrolled')
 
   setTimeout(() => {
     test.classList.add('body_scrolled')
@@ -58,12 +63,13 @@ const hideHeaderFullscreen = () => {
   headerText.forEach(i => i.classList.remove('header__text_scrolled'))
   headerNav.classList.remove('header__nav_scrolled')
   test.classList.remove('body_scrolled')
+  videoMasc.classList.remove('header__background_scrolled')
 
 }
 
 
 window.addEventListener('wheel', (e) => {
-  if(e.deltaY > 0 && !header.matches('.header_scrolled')){
+  if (e.deltaY > 0 && !header.matches('.header_scrolled')) {
     addHeaderFullscreen();
   }
 })
@@ -80,22 +86,38 @@ headerButton.addEventListener('click', () => {
 
 
 const indicator = (elem) => {
-  navigationMarker.style.left = `${elem.offsetLeft - 10}px`;
-  navigationMarker.style.width = `${elem.offsetWidth + 20}px`;
+
+  let permition = headerNav.classList.contains('header__nav_visible');
+
+  if (!permition) {
+    navigationMarker.style.top = '10px'
+    navigationMarker.style.left = `${elem.offsetLeft - 10}px`;
+    navigationMarker.style.width = `${elem.offsetWidth + 20}px`;
+  } else {
+    navigationMarker.style.width = '100%'
+    navigationMarker.style.left = '0'
+    navigationMarker.style.top = `${elem.offsetTop + 10}px`;
+  }
 }
 
+let activeLinkGlobal;
 
 const cb = (entries) => {
   entries.forEach((entry) => {
-    if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
 
-      console.log(entry.target)
+    if (entry.isIntersecting) {
+
       let sectionInVisionId = entry.target.id;
 
       let activeLink = document.querySelector(
         `.navigation__link[href="#${sectionInVisionId}"]`
       );
-      indicator(activeLink);
+
+      activeLinkGlobal = activeLink;
+
+      if (activeLink !== null) {
+        indicator(activeLink);
+      }
     }
   });
 };
@@ -103,7 +125,7 @@ const cb = (entries) => {
 const handleProjectMasc = (entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-     entry.target.classList.add('project__insight-mask_deactivate')
+      entry.target.classList.add('project__insight-mask_deactivate')
     }
   });
 }
@@ -123,3 +145,23 @@ flipCard.addEventListener('click', () => {
 })
 
 chevron.addEventListener('click', addHeaderFullscreen)
+
+
+/* -----------------------------------------------------------------------------
+*/
+
+const handlePopup = () => {
+  popup.classList.toggle('popup_opened')
+}
+
+popupOpenButton.addEventListener('click', handlePopup)
+
+/* -----------------------------------------------------------------------------
+*/
+
+const menuBurger = document.querySelector('.menu-burger');
+menuBurger.addEventListener('click', () => {
+  menuBurger.classList.toggle('open')
+  headerNav.classList.toggle('header__nav_visible')
+  indicator(activeLinkGlobal)
+})

@@ -6,7 +6,7 @@
 
   30%,
   70% {
-    color: #fff;
+    color: #c6c2c2;
     text-shadow:
       0 0 10px var(--color-glowing-text),
       0 0 20px var(--color-glowing-text),
@@ -17,7 +17,7 @@
   }
 
   100% {
-    color: #fff;
+    color: #808080;
     text-shadow:
       0 0 10px var(--color-glowing-text),
       0 0 20px var(--color-glowing-text),
@@ -38,7 +38,7 @@
 .glowing-letters__letter {
   color: var(--color-glowing-text);
   animation-delay: calc(.1s * var(--i));
-  font-size: 7.3rem;
+  font-size: 5.8rem;
   letter-spacing: .8rem;
   transition: 1s;
 }
@@ -46,7 +46,6 @@
 .glowing-letters:hover .glowing-letters__letter {
   animation: animate 2s linear infinite alternate-reverse;
   animation-delay: calc(.1s * var(--i));
-
 }
 
 .glowing-letters:hover .glowing-letters__letter_scrolled {
@@ -56,7 +55,7 @@
 
 .glowing-letters__letter_scrolled {
   color: var(--color-alternate-text);
-  font-size: 2rem;
+  font-size: 1.8rem;
   letter-spacing: .2rem;
   transition: 1s;
 

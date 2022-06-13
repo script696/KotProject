@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="stylesheet" href="./pages/index.css">
   <title>Document</title>
 </head>
@@ -103,6 +103,16 @@
         </svg>
       </div>
     </div>
+    <div class="header__background">
+      <video muted autoplay loop>
+        <source src="./video/video-background.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="header__burger-menu menu-burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </header>
   <main class="main">
     <section id="section-about" class="about">
@@ -122,9 +132,7 @@
             <p class="about__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam cum velit nostrum
               iure, ducimus accusantium sit quibusdam non, sunt consequatur ratione debitis! Numquam nam id repudiandae
               dolorum accusamus officiis facere.</p>
-            <p class="about__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam cum velit nostrum
-              iure, ducimus accusantium sit quibusdam non, sunt consequatur ratione debitis! Numquam nam id repudiandae
-              dolorum accusamus officiis facere.</p>
+
           </div>
         </div>
         <div class="about__right-col">
@@ -132,18 +140,11 @@
             <div class="flip-card__front">
               <div class="flip-card__inner">
                 <p class="flip-card__text-content">Thats Me</p>
-                <span class="flip-card__text-content">Press to see more</span>
               </div>
             </div>
             <div class="flip-card__back">
-              <div class="flip-card__back-content">
-                <p class="flip-card__back-text">My past</p>
-              </div>
-              <div class="flip-card__back-content">
-                <p class="flip-card__back-text">My current</p>
-              </div>
-              <div class="flip-card__back-content">
-                <p class="flip-card__back-text">My future</p>
+              <div class="flip-card__inner">
+                <p class="flip-card__text-content">Thats Me</p>
               </div>
             </div>
           </div>
@@ -155,7 +156,8 @@
         <h2 class="portfolio__title">This is my recent projects</h2>
         <ul class="portfolio__projects">
           <li class="portfolio__project project">
-            <article class="project__main">
+            <article class="project__main"
+              style="background: url('./img/portfolio/project1.png') center / cover no-repeat;">
               <div class="project__hover-mask"></div>
               <div class="project__masc-wrap">
                 <div class="project__insight-mask"></div>
@@ -173,7 +175,8 @@
           </li>
           <li class="portfolio__project project">
             <article class="project__main">
-              <div class="project__hover-mask"></div>
+              <div class="project__hover-mask"
+                style="background: url('./img/portfolio/project2.png') center / cover no-repeat;"></div>
               <div class="project__masc-wrap">
                 <div class="project__insight-mask"></div>
               </div>
@@ -188,10 +191,55 @@
               </div>
             </article>
           </li>
+          <li class="portfolio__project project">
+            <article class="project__main"
+              style="background: url('./img/portfolio/project3.png') center / cover no-repeat;">
+              <div class="project__hover-mask"></div>
+              <div class="project__masc-wrap">
+                <div class="project__insight-mask"></div>
+              </div>
+              <div class="project__number-mask mask-number">
+                <div class="mask-number__back">01</div>
+                <div class="mask-number__front">01</div>
+              </div>
+              <div class="project__text-wrap">
+                <h3 class="project__title">Lorem ipsum dolor</h3>
+                <p class="project__title-description">Lorem ipsum dolor sit amet</p>
+                <button class="project__popup-open" type="button">See more</button>
+              </div>
+            </article>
+          </li>
         </ul>
       </div>
     </section>
-    <section id="promo" class="promo">promo</section>
+    <section id="promo" class="promo">
+      <div class="promo__container">
+        <h2 class="promo__title">Read official info about me</h2>
+        <div class="promo__content">
+          <div class="promo__left-col">
+            <p class="promo__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem ut ad sint
+              voluptatem,
+              aliquam eveniet reiciendis vitae minus obcaecati eaque.
+            </p>
+            <p class="promo__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem ut ad sint
+              voluptatem,
+              aliquam eveniet reiciendis vitae minus obcaecati eaque.
+            </p>
+            <p class="promo__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem ut ad sint
+              voluptatem,
+              aliquam eveniet reiciendis vitae minus obcaecati eaque.
+            </p>
+          </div>
+          <div class="promo__right-col">
+            <a href="./download/example.pdf" target="_blank">Download</a>
+          </div>
+        </div>
+      </div>
+      <div class="promo__intersection-contact">
+        <p class="promo__bottom-text">Or contanct me</p>
+        <p class="promo__bottom-text">Anywhere</p>
+      </div>
+    </section>
     <section id="contact" class="contact">
       <div class="contact__container">
         <h2 class="contact__title">Get in touch</h2>
@@ -321,6 +369,11 @@
 
             </a>
           </li>
+          <li class="contact__link">
+            <a href="#">
+              <svg fill="#fff" stroke="#fff" width="64px" height="64px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><title/><path d="M46,61a15,15,0,0,1-9.49-3.37A26,26,0,0,1,6.39,27.48,15,15,0,0,1,27.48,6.39,26,26,0,0,1,57.61,36.52,15,15,0,0,1,46,61Zm-9.2-5.44a1,1,0,0,1,.66.25A13,13,0,0,0,55.78,37.46a1,1,0,0,1-.23-.85A24,24,0,0,0,27.39,8.45a1,1,0,0,1-.85-.23A13,13,0,0,0,8.22,26.54a1,1,0,0,1,.23.85A24,24,0,0,0,36.61,55.55Z"/><path d="M32.68,50.4c-5.93,0-11.83-3.07-13.87-6-1.88-2.65-1.35-4.53-.87-5.41a4.55,4.55,0,0,1,4.23-2.17c2.12.11,3.21,1.69,4.17,3.09a9.56,9.56,0,0,0,1.44,1.78c.51.45,2,1.15,6.12.76a3.33,3.33,0,0,0,2.81-1.66,3,3,0,0,0,.16-2.62C36.23,37,32.6,36.15,30,35.51c-.92-.23-1.81-.44-2.6-.67l-.48-.14c-3.34-.95-6.8-1.93-8.66-6.17-2-4.5.46-10.52,5.31-13.15s14.37-1.12,17.56,1.19c2.69,1.95,4.13,4,4.16,5.79a3.55,3.55,0,0,1-1.51,2.94c-2.5,1.95-5.38.44-7.23-1.62l-.16-.18c-.92-1-1.38-1.55-4.48-1.87a5.12,5.12,0,0,0-4,.94A2.82,2.82,0,0,0,27,24.83c.06,1.48,3.44,2.22,5.67,2.7a23.83,23.83,0,0,1,2.54.64c.51.18,1.14.34,1.8.52,2.48.65,5.87,1.54,7.93,4.48a9.3,9.3,0,0,1,1.27,7.24,12.9,12.9,0,0,1-6.46,8.2A13.94,13.94,0,0,1,32.68,50.4ZM21.93,38.87A2.56,2.56,0,0,0,19.69,40c-.45.81-.18,2,.75,3.29,2.45,3.45,11.86,7.34,18.31,3.59,3.79-2.2,5.08-5,5.51-6.9a7.28,7.28,0,0,0-.95-5.66C41.66,32,38.8,31.24,36.5,30.63c-.7-.18-1.37-.36-2-.56a22.4,22.4,0,0,0-2.3-.58c-3.17-.69-7.11-1.55-7.24-4.57a4.79,4.79,0,0,1,1.45-3.82,7,7,0,0,1,5.61-1.47c3.69.38,4.56,1.17,5.77,2.53l.16.18c.61.67,2.73,2.77,4.52,1.38a1.62,1.62,0,0,0,.74-1.33c0-1.15-1.24-2.68-3.34-4.2-2.73-2-11.39-3.25-15.44-1.06s-6,7.07-4.44,10.6,4.08,4.12,7.37,5l.49.14c.77.22,1.63.43,2.53.65,3.51.86,7.14,1.75,8.2,3.71a5,5,0,0,1-.16,4.51,5.31,5.31,0,0,1-4.38,2.71c-3.77.35-6.26-.05-7.63-1.24h0A11.15,11.15,0,0,1,24.7,41.1c-.93-1.34-1.55-2.17-2.62-2.22Z"/></svg>
+            </a>
+          </li>
         </ul>
       </div>
       <div class="contact__copyright">
@@ -328,6 +381,11 @@
       </div>
     </section>
   </main>
+  <section class="popup">
+    <div class="popup__container">
+      <div class="popup__content"></div>
+    </div>
+  </section>
   <script src="./js/index.js"></script>
   <script src="./js/observer.js"></script>
 </body>
