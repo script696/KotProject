@@ -39,7 +39,7 @@ const chevron = document.querySelector('.chevron')
 */
 
 const popup = document.querySelector('.popup')
-const popupOpenButton = document.querySelector('.project__popup-open')
+const popupOpenButtons = document.querySelectorAll('.project__popup-open')
 const popupCloseButton = document.querySelector('.popup__close-button')
 /* -----------------------------------------------------------------------------
 */
@@ -205,49 +205,203 @@ const testBullet = document.querySelectorAll(".swiper-pagination-bullet");
 const slideContent = document.querySelector(".slideOneTest");
 
 const slide1 = document.querySelector('.slide[aria-label="1 / 4"]')
+const slide2 = document.querySelector('.slide[aria-label="2 / 4"]')
+const slide3 = document.querySelector('.slide[aria-label="3 / 4"]')
+const slide4 = document.querySelector('.slide[aria-label="4 / 4"]')
 
 
 
 const projectRussianTravel = {
-  
-  title: {
-    type: "h2",
-    text: "Проект Russian-travel!",
-    className: "slide__title",
-    parent: "slide__wrapper",
-    position: 'prepend',
-  },
-  subTitleAbout: {
-    type: "p",
-    text: "О чем",
-    className: "slide__subtitle",
-    parent: "slideOne__left-col",
-    position: 'append',
-  },
-  paragraph1: {
-    type: "p",
-    text:
-      "Russian-travel - одностраничный лендинг и моя первая серьезная работа в разработке Веб интерфейсов. В качестве исходных данных был предоставлен макет в Figma для разрешений 320, 768, 1024 и 1280 пикселей.",
-    className: "slide__text",
-    parent: "slideOne__left-col",
-    position: 'append',
+  slide1: {
+    title: {
+      type: "h2",
+      text: "Проект Russian-travel!",
+      className: "slide__title",
+      parent: "slide__wrapper",
+      position: 'prepend',
+    },
+    subTitleAbout: {
+      type: "p",
+      text: "О чем",
+      className: "slide__subtitle",
+      parent: "slide1__left-col",
+      position: 'append',
+    },
+    paragraph1: {
+      type: "p",
+      text:
+        "Russian-travel - одностраничный лендинг и моя первая серьезная работа в разработке Веб интерфейсов. В качестве исходных данных был предоставлен макет в Figma для разрешений 320, 768, 1024 и 1280 пикселей.",
+      className: "slide__text",
+      parent: "slide1__left-col",
+      position: 'append',
 
-  },
-  subTitleTarget: {
-    type: "p",
-    text: "Зачем",
-    className: "slide__subtitle",
-    parent: "slideOne__right-col",
-    position: 'append',
+    },
+    subTitleTarget: {
+      type: "p",
+      text: "Зачем",
+      className: "slide__subtitle",
+      parent: "slide1__right-col",
+      position: 'append',
 
+    },
+    paragraph2: {
+      type: "p",
+      text:
+        "Целью задачи было разработать адаптивный сайт который бы одинакого хорошо смотрелся на устройствах размером от большого монитора до маленького телефона.",
+      className: "slide__text",
+      parent: "slide1__right-col",
+      position: 'append',
+    }
   },
-  paragraph2: {
-    type: "p",
-    text:
-      "Целью задачи было разработать адаптивный сайт который бы одинакого хорошо смотрелся на устройствах размером от большого монитора до маленького телефона.",
-    className: "slide__text",
-    parent: "slideOne__right-col",
-    position: 'append',
+  slide2: {
+    title: {
+      type: "h2",
+      text: "What i learned",
+      className: "slide__title",
+      parent: "slide__wrapper",
+      position: 'prepend',
+    },
+    item1: {
+      type: "li",
+      text: "Элемент списка",
+      className: "enumerated-list__item",
+      parent: "enumerated-list",
+      position: 'append',
+    },
+    item2: {
+      type: "li",
+      text: "Элемент списка",
+      className: "enumerated-list__item",
+      parent: "enumerated-list",
+      position: 'append',
+    },
+    item3: {
+      type: "li",
+      text: "Элемент списка",
+      className: "enumerated-list__item",
+      parent: "enumerated-list",
+      position: 'append',
+    },
+    item4: {
+      type: "li",
+      text: "Элемент списка",
+      className: "enumerated-list__item",
+      parent: "enumerated-list",
+      position: 'append',
+    },
+    item5: {
+      type: "li",
+      text: "Элемент списка",
+      className: "enumerated-list__item",
+      parent: "enumerated-list",
+      position: 'append',
+    },
+  },
+  slide3: {
+    subTitle: {
+      type: "p",
+      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia tempore blanditiis quisquam iusto dolores corrupti veniam eos dolorum ut! Earum.",
+      className: "slide__subtitle",
+      parent: "slide__wrapper",
+      position: 'prepend',
+    },
+    title: {
+      type: "h2",
+      text: "What to improve",
+      className: "slide__title",
+      parent: "slide__wrapper",
+      position: 'prepend',
+    },
+    item1: {
+      type: "li",
+      text: "Элемент списка",
+      className: "enumerated-list__item",
+      parent: "enumerated-list",
+      position: 'append',
+    },
+    item2: {
+      type: "li",
+      text: "Элемент списка",
+      className: "enumerated-list__item",
+      parent: "enumerated-list",
+      position: 'append',
+    },
+    item3: {
+      type: "li",
+      text: "Элемент списка",
+      className: "enumerated-list__item",
+      parent: "enumerated-list",
+      position: 'append',
+    },
+  },
+  slide4: {
+
+    subTitle: {
+      type: "p",
+      text: "Lorem ipsum dolor sit amet.",
+      className: "slide__subtitle",
+      parent: "slide__wrapper",
+      position: 'prepend',
+    },
+
+    title: {
+      type: "h2",
+      text: "Skills & Tools",
+      className: "slide__title",
+      parent: "slide__wrapper",
+      position: 'prepend',
+    },
+    
+    html5: {
+      type: "img",
+      text: "HTML5",
+      className: "skill__img",
+      parent: "slide__skills",
+      position: 'append',
+      isImage: 'true',
+      src: './img/svg/html5.svg',
+      alt: 'HTML5 logo',
+    },
+    css3: {
+      type: "img",
+      text: "CSS3",
+      className: "skill__img",
+      parent: "slide__skills",
+      position: 'append',
+      isImage: 'true',
+      src: './img/svg/css3.svg',
+      alt: 'CSS3 logo',
+    },
+    Responsive: {
+      type: "img",
+      text: "Responsive",
+      className: "skill__img",
+      parent: "slide__skills",
+      position: 'append',
+      isImage: 'true',
+      src: './img/svg/responsive.svg',
+      alt: 'Responsive logo',
+    },
+    github: {
+      type: "img",
+      text: "GitHub",
+      className: "skill__img",
+      parent: "slide__skills",
+      position: 'append',
+      isImage: 'true',
+      src: './img/svg/github.svg',
+      alt: 'HTML5 icon',
+    },
+    vscode: {
+      type: "img",
+      text: "VSCode",
+      className: "skill__img",
+      parent: "slide__skills",
+      position: 'append',
+      isImage: 'true',
+      src: './img/svg/vscode.svg',
+      alt: 'HTML5 icon',
+    },
 
   }
 };
@@ -255,31 +409,33 @@ const projectRussianTravel = {
 
 const allProjects = {
   projectRussianTravel: projectRussianTravel,
+  projectMesto: projectMesto,
+  projectTuoTown: projectTuoTown,
 }
 
-// const createProject = () => {
+const createProject = (data) => {
+  const numOfSlides = Object.keys(data)
 
-// }
+}
 
 const createSlide = (data, slideName) => {
   const slideTemplate = document
     .querySelector(`.${slideName}`)
     .content.cloneNode(true);
 
+  Object.keys(data[slideName]).forEach((val) => {
 
-  Object.keys(data).forEach((val) => {
+    const elem = createElem(data, val, slideName);
+    const elemPosition = data[slideName][val]['position'] === 'prepend'
+      ? true
+      : false;
 
-    const elem = createElem(data, val);
-    const elemPosition = data[val]['position'] === 'prepend'
-    ? true
-    : false;
-
-    const parentElemClassName = data[val]["parent"];
+    const parentElemClassName = data[slideName][val]["parent"];
     const parentElem = slideTemplate.querySelector("." + parentElemClassName);
 
-    elemPosition 
-    ? parentElem.prepend(elem)
-    : parentElem.append(elem);
+    elemPosition
+      ? parentElem.prepend(elem)
+      : parentElem.append(elem);
 
   });
 
@@ -287,24 +443,45 @@ const createSlide = (data, slideName) => {
 };
 
 
-const createElem = (data, val) => {
-  const elemType = data[val]["type"];
-  const elemClass = data[val]["className"];
-  const elemText = data[val]["text"];
-  const newElem = document.createElement(elemType);
-  newElem.classList.add(elemClass);
-  newElem.textContent = elemText;
+const createElem = (data, val, slideName) => {
+  const elemType = data[slideName][val]["type"];
+  const elemClass = data[slideName][val]["className"];
+  const elemText = data[slideName][val]["text"];
+  const isImage = data[slideName][val]["isImage"];
 
-  return newElem;
+  if (!isImage) {
+    const newElem = document.createElement(elemType);
+
+    newElem.classList.add(elemClass);
+    newElem.textContent = elemText;
+    return newElem;
+
+  } else {
+    const newLiElem = document.createElement('li');
+    const newElem = document.createElement(elemType);
+
+
+    newLiElem.classList.add('slide__skill');
+    newLiElem.textContent = elemText;
+
+    newElem.classList.add(elemClass);
+    newElem.src = data[slideName][val]["src"];
+    newElem.alt = data[slideName][val]["alt"];
+
+    newLiElem.append(newElem)
+
+    return newLiElem
+  }
 };
 
-const openPopup = (e) => {
-  const slideOne = createSlide(projectRussianTravel, 'slideOne');
-  // const slideTwo
-  // const slideThree
-  // const slideFour
-  const currentProject = e.target.id;
-  const currentProjectData = allProjects[currentProject];
+const openPopup = (currentProject) => {
+  
+  createProject(currentProject)
+
+  const slideOne = createSlide(allProjects[currentProject], 'slide1');
+  const slideTwo = createSlide(allProjects[currentProject], 'slide2');
+  const slideThree = createSlide(allProjects[currentProject], 'slide3');
+  const slideFour = createSlide(allProjects[currentProject], 'slide4');
 
   popup.classList.add("popup_opened");
 
@@ -312,20 +489,38 @@ const openPopup = (e) => {
 
 
   slide1.append(slideOne);
-
+  slide2.append(slideTwo);
+  slide3.append(slideThree);
+  slide4.append(slideFour);
 };
+
+const resetSwiper = () => {
+  slide1.innerHTML = "";
+  slide2.innerHTML = "";
+  slide3.innerHTML = "";
+  slide4.innerHTML = "";
+}
+
 
 const closePopup = () => {
   popup.classList.remove("popup_opened");
 
   body.classList.toggle('body_popup')
 
-  slide1.innerHTML = "";
+  resetSwiper()
+ 
 };
 
 
 
-popupOpenButton.addEventListener('click', openPopup)
+// popupOpenButton.addEventListener('click', openPopup)
+popupOpenButtons.forEach(button => {
+  button.addEventListener('click', (e) => {
+    const currentProject = e.target.id;
+    const currentProjectData = allProjects[currentProject];
+    openPopup(currentProjectData)
+  });
+})
 popupCloseButton.addEventListener('click', closePopup)
 /* -----------------------------------PopupEnd----------------------------------
 */

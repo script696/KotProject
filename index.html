@@ -150,7 +150,7 @@
               <div class="project__text-wrap">
                 <h3 class="project__title">Project Mesto</h3>
                 <p class="project__title-description">My vanilla JavaScript introduction</p>
-                <button class="project__popup-open" type="button">See more</button>
+                <button id="projectMesto" class="project__popup-open" type="button">See more</button>
               </div>
             </article>
           </li>
@@ -168,7 +168,7 @@
               <div class="project__text-wrap project__text-wrap_position_alternate">
                 <h3 class="project__title">Landing TuoTown</h3>
                 <p class="project__title-description">My first self-supporting landing</p>
-                <button class="project__popup-open" type="button">See more</button>
+                <button id="projectTuoTown" class="project__popup-open" type="button">See more</button>
               </div>
             </article>
           </li>
@@ -356,54 +356,10 @@
       <div class="popup__content">
         <div class="swiper mySwiper">
           <div class="swiper-wrapper">
-            <div class="swiper-slide slide" id="slideOne"></div>
-            <div class="swiper-slide slide">
-              <h2 class="slide__title">What i learned</h2>
-              <ul class="enumerated-list">
-                <li class="enumerated-list__item">Элемент списка</li>
-                <li class="enumerated-list__item">Элемент списка</li>
-                <li class="enumerated-list__item">Элемент списка</li>
-                <li class="enumerated-list__item">Элемент списка</li>
-                <li class="enumerated-list__item">Элемент списка</li>
-                <li class="enumerated-list__item">Элемент списка</li>
-              </ul>
-            </div>
-            <div class="swiper-slide slide">
-              <h2 class="slide__title">What to improve</h2>
-              <p class="slide__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia tempore blanditiis
-                quisquam iusto dolores corrupti veniam eos dolorum ut! Earum.</p>
-              <ul class="enumerated-list">
-                <li class="enumerated-list__item">Элемент списка</li>
-                <li class="enumerated-list__item">Элемент списка</li>
-                <li class="enumerated-list__item">Элемент списка</li>
-              </ul>
-            </div>
-            <div class="swiper-slide slide">
-              <h2 class="slide__title">Skills & Tools</h2>
-              <h3 class="slide__subtitle">Lorem ipsum dolor sit amet.</h3>
-              <ul class="slide__skills">
-                <li class="slide__skill">
-                  <p>HTML5</p>
-                  <img src="./img/svg/html5.svg" alt="HTML5 icon">
-                </li>
-                <li class="slide__skill">
-                  <p>HTML5</p>
-                  <img src="./img/svg/html5.svg" alt="HTML5 icon">
-                </li>
-                <li class="slide__skill">
-                  <p>HTML5</p>
-                  <img src="./img/svg/html5.svg" alt="HTML5 icon">
-                </li>
-                <li class="slide__skill">
-                  <p>HTML5</p>
-                  <img src="./img/svg/html5.svg" alt="HTML5 icon">
-                </li>
-                <li class="slide__skill">
-                  <p>HTML5</p>
-                  <img src="./img/svg/html5.svg" alt="HTML5 icon">
-                </li>
-              </ul>
-            </div>
+            <div class="swiper-slide slide"></div>
+            <div class="swiper-slide slide"></div>
+            <div class="swiper-slide slide"></div>
+            <div class="swiper-slide slide"></div>
           </div>
           <div class="swiper-pagination"></div>
         </div>
@@ -455,28 +411,30 @@
       </button>
     </div>
   </section>
-  <template id="slideOne" class="slide slideOne">
+  <template class="slide slide1">
     <div class="slide__wrapper">
-      <h2 class="slideOne__title"></h2>
-      <div class="slideOne__content">
-        <div class="slideOne__left-col">
-         
-        </div>
-        <div class="slideOne__right-col">
-         
-        </div>
+      <h2 class="slide1__title"></h2>
+      <div class="slide1__content">
+        <div class="slide1__left-col"></div>
+        <div class="slide1__right-col"></div>
       </div>
     </div>
   </template>
-  <template id="slideTwo">
+  <template class="slide slide2">
     <div class="slide__wrapper">
+      <ul class="enumerated-list"></ul>
     </div>
   </template>
-  <template id="slideThree">
-
+  <template class="slide slide3">
+    <div class="slide__wrapper">
+      <ul class="enumerated-list"></ul>
+    </div>
   </template>
-  <template id="slideFour">
-
+  <template class="slide slide4">
+    <div class="slide__wrapper">
+      <ul class="slide__skills">
+      </ul>
+    </div>
   </template>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="./js/index.js"></script>

@@ -23,15 +23,15 @@
 
 }
 
-.slideOne__content{
+.slide1e__content{
 display: flex;
 }
 
-.slideOne__left-col{
+.slide1__left-col{
   flex: 1 1 auto;
 }
 
-.slideOne__right-col{
+.slide1__right-col{
   flex: 1 1 auto;
 }
 
@@ -45,15 +45,23 @@ display: flex;
 }
 
 .slide__skill {
+  position: relative;
   text-align: center;
   background: #fff;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px 0;
 }
 .slide__skill p {
   font-size: .8em;
   margin-bottom: 6px;
 }
-.slide__skill img{
+.skill__img{
+  position: relative;
   margin: auto;
   width: 60px;
   height: 60px;
+  object-fit: cover;
 }
+
