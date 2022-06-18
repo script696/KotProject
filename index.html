@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="stylesheet" href="./pages/index.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <title>Document</title>
 </head>
 
@@ -35,7 +36,6 @@
           class="test">.</span>
       </p>
     </div>
-
     <nav class="header__nav navigation">
       <ul class="navigation__links">
         <div class="navigation__marker"></div>
@@ -61,48 +61,10 @@
         </li>
       </ul>
     </nav>
-    <div class="header__scroll-marker">
-      <p>scroll down to see more</p>
-      <div class="chevron chevron_active">
-        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-          x="0px" y="0px" viewBox="0 0 330.001 330.001" style="enable-background:new 0 0 330.001 330.001;"
-          xml:space="preserve">
-          <path d="M328.859,84.26C326.537,78.655,321.067,75,315,75H15c-6.067,0-11.537,3.655-13.858,9.26
-       c-2.321,5.605-1.038,12.057,3.252,16.347l150,150C157.323,253.536,161.161,255,165,255s7.678-1.464,10.606-4.394l150-150
-       C329.897,96.317,331.18,89.865,328.859,84.26z M165,218.787L51.214,105h227.573L165,218.787z" />
-          <g>
-          </g>
-          <g>
-          </g>
-          <g>
-          </g>
-          <g>
-          </g>
-          <g>
-          </g>
-          <g>
-          </g>
-          <g>
-          </g>
-          <g>
-          </g>
-          <g>
-          </g>
-          <g>
-          </g>
-          <g>
-          </g>
-          <g>
-          </g>
-          <g>
-          </g>
-          <g>
-          </g>
-          <g>
-          </g>
-        </svg>
-      </div>
-    </div>
+    <!-- <div class="header__scroll-marker">
+      <p class="header__scroll-title">scroll down to see more</p>
+      <span class="the-arrow arrow-down"></span>
+    </div> -->
     <div class="header__background">
       <video muted autoplay loop>
         <source src="./video/video-background.mp4" type="video/mp4">
@@ -113,6 +75,7 @@
       <span></span>
       <span></span>
     </div>
+
   </header>
   <main class="main">
     <section id="section-about" class="about">
@@ -157,6 +120,24 @@
         <ul class="portfolio__projects">
           <li class="portfolio__project project">
             <article class="project__main"
+              style="background: url('./img/portfolio/project3.png') center / cover no-repeat;">
+              <div class="project__hover-mask"></div>
+              <div class="project__masc-wrap">
+                <div class="project__insight-mask"></div>
+              </div>
+              <div class="project__number-mask mask-number">
+                <div class="mask-number__back">01</div>
+                <div class="mask-number__front">01</div>
+              </div>
+              <div class="project__text-wrap">
+                <h3 class="project__title">Russian-travel</h3>
+                <p class="project__title-description">One of my first landings</p>
+                <button id="projectRussianTravel" class="project__popup-open" type="button">See more</button>
+              </div>
+            </article>
+          </li>
+          <li class="portfolio__project project">
+            <article class="project__main"
               style="background: url('./img/portfolio/project1.png') center / cover no-repeat;">
               <div class="project__hover-mask"></div>
               <div class="project__masc-wrap">
@@ -167,8 +148,8 @@
                 <div class="mask-number__front">01</div>
               </div>
               <div class="project__text-wrap">
-                <h3 class="project__title">Lorem ipsum dolor</h3>
-                <p class="project__title-description">Lorem ipsum dolor sit amet</p>
+                <h3 class="project__title">Project Mesto</h3>
+                <p class="project__title-description">My vanilla JavaScript introduction</p>
                 <button class="project__popup-open" type="button">See more</button>
               </div>
             </article>
@@ -181,30 +162,12 @@
                 <div class="project__insight-mask"></div>
               </div>
               <div class="project__number-mask project__number-mask_position_alternate mask-number">
-                <div class="mask-number__back">01</div>
-                <div class="mask-number__front">01</div>
+                <div class="mask-number__back">02</div>
+                <div class="mask-number__front">02</div>
               </div>
               <div class="project__text-wrap project__text-wrap_position_alternate">
-                <h3 class="project__title">Lorem ipsum dolor</h3>
-                <p class="project__title-description">Lorem ipsum dolor sit amet</p>
-                <button class="project__popup-open" type="button">See more</button>
-              </div>
-            </article>
-          </li>
-          <li class="portfolio__project project">
-            <article class="project__main"
-              style="background: url('./img/portfolio/project3.png') center / cover no-repeat;">
-              <div class="project__hover-mask"></div>
-              <div class="project__masc-wrap">
-                <div class="project__insight-mask"></div>
-              </div>
-              <div class="project__number-mask mask-number">
-                <div class="mask-number__back">01</div>
-                <div class="mask-number__front">01</div>
-              </div>
-              <div class="project__text-wrap">
-                <h3 class="project__title">Lorem ipsum dolor</h3>
-                <p class="project__title-description">Lorem ipsum dolor sit amet</p>
+                <h3 class="project__title">Landing TuoTown</h3>
+                <p class="project__title-description">My first self-supporting landing</p>
                 <button class="project__popup-open" type="button">See more</button>
               </div>
             </article>
@@ -371,7 +334,14 @@
           </li>
           <li class="contact__link">
             <a href="#">
-              <svg fill="#fff" stroke="#fff" width="64px" height="64px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><title/><path d="M46,61a15,15,0,0,1-9.49-3.37A26,26,0,0,1,6.39,27.48,15,15,0,0,1,27.48,6.39,26,26,0,0,1,57.61,36.52,15,15,0,0,1,46,61Zm-9.2-5.44a1,1,0,0,1,.66.25A13,13,0,0,0,55.78,37.46a1,1,0,0,1-.23-.85A24,24,0,0,0,27.39,8.45a1,1,0,0,1-.85-.23A13,13,0,0,0,8.22,26.54a1,1,0,0,1,.23.85A24,24,0,0,0,36.61,55.55Z"/><path d="M32.68,50.4c-5.93,0-11.83-3.07-13.87-6-1.88-2.65-1.35-4.53-.87-5.41a4.55,4.55,0,0,1,4.23-2.17c2.12.11,3.21,1.69,4.17,3.09a9.56,9.56,0,0,0,1.44,1.78c.51.45,2,1.15,6.12.76a3.33,3.33,0,0,0,2.81-1.66,3,3,0,0,0,.16-2.62C36.23,37,32.6,36.15,30,35.51c-.92-.23-1.81-.44-2.6-.67l-.48-.14c-3.34-.95-6.8-1.93-8.66-6.17-2-4.5.46-10.52,5.31-13.15s14.37-1.12,17.56,1.19c2.69,1.95,4.13,4,4.16,5.79a3.55,3.55,0,0,1-1.51,2.94c-2.5,1.95-5.38.44-7.23-1.62l-.16-.18c-.92-1-1.38-1.55-4.48-1.87a5.12,5.12,0,0,0-4,.94A2.82,2.82,0,0,0,27,24.83c.06,1.48,3.44,2.22,5.67,2.7a23.83,23.83,0,0,1,2.54.64c.51.18,1.14.34,1.8.52,2.48.65,5.87,1.54,7.93,4.48a9.3,9.3,0,0,1,1.27,7.24,12.9,12.9,0,0,1-6.46,8.2A13.94,13.94,0,0,1,32.68,50.4ZM21.93,38.87A2.56,2.56,0,0,0,19.69,40c-.45.81-.18,2,.75,3.29,2.45,3.45,11.86,7.34,18.31,3.59,3.79-2.2,5.08-5,5.51-6.9a7.28,7.28,0,0,0-.95-5.66C41.66,32,38.8,31.24,36.5,30.63c-.7-.18-1.37-.36-2-.56a22.4,22.4,0,0,0-2.3-.58c-3.17-.69-7.11-1.55-7.24-4.57a4.79,4.79,0,0,1,1.45-3.82,7,7,0,0,1,5.61-1.47c3.69.38,4.56,1.17,5.77,2.53l.16.18c.61.67,2.73,2.77,4.52,1.38a1.62,1.62,0,0,0,.74-1.33c0-1.15-1.24-2.68-3.34-4.2-2.73-2-11.39-3.25-15.44-1.06s-6,7.07-4.44,10.6,4.08,4.12,7.37,5l.49.14c.77.22,1.63.43,2.53.65,3.51.86,7.14,1.75,8.2,3.71a5,5,0,0,1-.16,4.51,5.31,5.31,0,0,1-4.38,2.71c-3.77.35-6.26-.05-7.63-1.24h0A11.15,11.15,0,0,1,24.7,41.1c-.93-1.34-1.55-2.17-2.62-2.22Z"/></svg>
+              <svg fill="#fff" stroke="#fff" width="64px" height="64px" viewBox="0 0 64 64"
+                xmlns="http://www.w3.org/2000/svg">
+                <title />
+                <path
+                  d="M46,61a15,15,0,0,1-9.49-3.37A26,26,0,0,1,6.39,27.48,15,15,0,0,1,27.48,6.39,26,26,0,0,1,57.61,36.52,15,15,0,0,1,46,61Zm-9.2-5.44a1,1,0,0,1,.66.25A13,13,0,0,0,55.78,37.46a1,1,0,0,1-.23-.85A24,24,0,0,0,27.39,8.45a1,1,0,0,1-.85-.23A13,13,0,0,0,8.22,26.54a1,1,0,0,1,.23.85A24,24,0,0,0,36.61,55.55Z" />
+                <path
+                  d="M32.68,50.4c-5.93,0-11.83-3.07-13.87-6-1.88-2.65-1.35-4.53-.87-5.41a4.55,4.55,0,0,1,4.23-2.17c2.12.11,3.21,1.69,4.17,3.09a9.56,9.56,0,0,0,1.44,1.78c.51.45,2,1.15,6.12.76a3.33,3.33,0,0,0,2.81-1.66,3,3,0,0,0,.16-2.62C36.23,37,32.6,36.15,30,35.51c-.92-.23-1.81-.44-2.6-.67l-.48-.14c-3.34-.95-6.8-1.93-8.66-6.17-2-4.5.46-10.52,5.31-13.15s14.37-1.12,17.56,1.19c2.69,1.95,4.13,4,4.16,5.79a3.55,3.55,0,0,1-1.51,2.94c-2.5,1.95-5.38.44-7.23-1.62l-.16-.18c-.92-1-1.38-1.55-4.48-1.87a5.12,5.12,0,0,0-4,.94A2.82,2.82,0,0,0,27,24.83c.06,1.48,3.44,2.22,5.67,2.7a23.83,23.83,0,0,1,2.54.64c.51.18,1.14.34,1.8.52,2.48.65,5.87,1.54,7.93,4.48a9.3,9.3,0,0,1,1.27,7.24,12.9,12.9,0,0,1-6.46,8.2A13.94,13.94,0,0,1,32.68,50.4ZM21.93,38.87A2.56,2.56,0,0,0,19.69,40c-.45.81-.18,2,.75,3.29,2.45,3.45,11.86,7.34,18.31,3.59,3.79-2.2,5.08-5,5.51-6.9a7.28,7.28,0,0,0-.95-5.66C41.66,32,38.8,31.24,36.5,30.63c-.7-.18-1.37-.36-2-.56a22.4,22.4,0,0,0-2.3-.58c-3.17-.69-7.11-1.55-7.24-4.57a4.79,4.79,0,0,1,1.45-3.82,7,7,0,0,1,5.61-1.47c3.69.38,4.56,1.17,5.77,2.53l.16.18c.61.67,2.73,2.77,4.52,1.38a1.62,1.62,0,0,0,.74-1.33c0-1.15-1.24-2.68-3.34-4.2-2.73-2-11.39-3.25-15.44-1.06s-6,7.07-4.44,10.6,4.08,4.12,7.37,5l.49.14c.77.22,1.63.43,2.53.65,3.51.86,7.14,1.75,8.2,3.71a5,5,0,0,1-.16,4.51,5.31,5.31,0,0,1-4.38,2.71c-3.77.35-6.26-.05-7.63-1.24h0A11.15,11.15,0,0,1,24.7,41.1c-.93-1.34-1.55-2.17-2.62-2.22Z" />
+              </svg>
             </a>
           </li>
         </ul>
@@ -383,9 +353,132 @@
   </main>
   <section class="popup">
     <div class="popup__container">
-      <div class="popup__content"></div>
+      <div class="popup__content">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide slide" id="slideOne"></div>
+            <div class="swiper-slide slide">
+              <h2 class="slide__title">What i learned</h2>
+              <ul class="enumerated-list">
+                <li class="enumerated-list__item">Элемент списка</li>
+                <li class="enumerated-list__item">Элемент списка</li>
+                <li class="enumerated-list__item">Элемент списка</li>
+                <li class="enumerated-list__item">Элемент списка</li>
+                <li class="enumerated-list__item">Элемент списка</li>
+                <li class="enumerated-list__item">Элемент списка</li>
+              </ul>
+            </div>
+            <div class="swiper-slide slide">
+              <h2 class="slide__title">What to improve</h2>
+              <p class="slide__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia tempore blanditiis
+                quisquam iusto dolores corrupti veniam eos dolorum ut! Earum.</p>
+              <ul class="enumerated-list">
+                <li class="enumerated-list__item">Элемент списка</li>
+                <li class="enumerated-list__item">Элемент списка</li>
+                <li class="enumerated-list__item">Элемент списка</li>
+              </ul>
+            </div>
+            <div class="swiper-slide slide">
+              <h2 class="slide__title">Skills & Tools</h2>
+              <h3 class="slide__subtitle">Lorem ipsum dolor sit amet.</h3>
+              <ul class="slide__skills">
+                <li class="slide__skill">
+                  <p>HTML5</p>
+                  <img src="./img/svg/html5.svg" alt="HTML5 icon">
+                </li>
+                <li class="slide__skill">
+                  <p>HTML5</p>
+                  <img src="./img/svg/html5.svg" alt="HTML5 icon">
+                </li>
+                <li class="slide__skill">
+                  <p>HTML5</p>
+                  <img src="./img/svg/html5.svg" alt="HTML5 icon">
+                </li>
+                <li class="slide__skill">
+                  <p>HTML5</p>
+                  <img src="./img/svg/html5.svg" alt="HTML5 icon">
+                </li>
+                <li class="slide__skill">
+                  <p>HTML5</p>
+                  <img src="./img/svg/html5.svg" alt="HTML5 icon">
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+      <button class="popup__close-button">
+        <?xml version="1.0" encoding="iso-8859-1"?>
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          x="0px" y="0px" viewBox="0 0 252 252" style="enable-background:new 0 0 252 252;" xml:space="preserve">
+          <g>
+            <path d="M126,0C56.523,0,0,56.523,0,126s56.523,126,126,126s126-56.523,126-126S195.477,0,126,0z M126,234
+        c-59.551,0-108-48.449-108-108S66.449,18,126,18s108,48.449,108,108S185.551,234,126,234z" />
+            <path d="M164.612,87.388c-3.515-3.515-9.213-3.515-12.728,0L126,113.272l-25.885-25.885c-3.515-3.515-9.213-3.515-12.728,0
+        c-3.515,3.515-3.515,9.213,0,12.728L113.272,126l-25.885,25.885c-3.515,3.515-3.515,9.213,0,12.728
+        c1.757,1.757,4.061,2.636,6.364,2.636s4.606-0.879,6.364-2.636L126,138.728l25.885,25.885c1.757,1.757,4.061,2.636,6.364,2.636
+        s4.606-0.879,6.364-2.636c3.515-3.515,3.515-9.213,0-12.728L138.728,126l25.885-25.885
+        C168.127,96.601,168.127,90.902,164.612,87.388z" />
+          </g>
+          <g>
+          </g>
+          <g>
+          </g>
+          <g>
+          </g>
+          <g>
+          </g>
+          <g>
+          </g>
+          <g>
+          </g>
+          <g>
+          </g>
+          <g>
+          </g>
+          <g>
+          </g>
+          <g>
+          </g>
+          <g>
+          </g>
+          <g>
+          </g>
+          <g>
+          </g>
+          <g>
+          </g>
+          <g>
+          </g>
+        </svg>
+      </button>
     </div>
   </section>
+  <template id="slideOne" class="slide slideOne">
+    <div class="slide__wrapper">
+      <h2 class="slideOne__title"></h2>
+      <div class="slideOne__content">
+        <div class="slideOne__left-col">
+         
+        </div>
+        <div class="slideOne__right-col">
+         
+        </div>
+      </div>
+    </div>
+  </template>
+  <template id="slideTwo">
+    <div class="slide__wrapper">
+    </div>
+  </template>
+  <template id="slideThree">
+
+  </template>
+  <template id="slideFour">
+
+  </template>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="./js/index.js"></script>
   <script src="./js/observer.js"></script>
 </body>

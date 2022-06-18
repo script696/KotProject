@@ -47,6 +47,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .contact__link:nth-child(1) {
@@ -74,6 +75,7 @@
 }
 
 .contact__link a {
+  width: 100%;
   color: #fff;
 }
 

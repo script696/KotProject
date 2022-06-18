@@ -1,3 +1,5 @@
+const body = document.querySelector('body')
+
 /* header Elements
 */
 const header = document.querySelector('.header')
@@ -38,6 +40,7 @@ const chevron = document.querySelector('.chevron')
 
 const popup = document.querySelector('.popup')
 const popupOpenButton = document.querySelector('.project__popup-open')
+const popupCloseButton = document.querySelector('.popup__close-button')
 /* -----------------------------------------------------------------------------
 */
 const addHeaderFullscreen = () => {
@@ -144,17 +147,13 @@ flipCard.addEventListener('click', () => {
   flipCardBack.classList.toggle('flip-card__back_pushed')
 })
 
-chevron.addEventListener('click', addHeaderFullscreen)
+// chevron.addEventListener('click', addHeaderFullscreen)
 
 
 /* -----------------------------------------------------------------------------
 */
 
-const handlePopup = () => {
-  popup.classList.toggle('popup_opened')
-}
 
-popupOpenButton.addEventListener('click', handlePopup)
 
 /* -----------------------------------------------------------------------------
 */
@@ -165,3 +164,168 @@ menuBurger.addEventListener('click', () => {
   headerNav.classList.toggle('header__nav_visible')
   indicator(activeLinkGlobal)
 })
+
+/* -----------------------------------------------------------------------------
+*/
+
+var swiper = new Swiper(".mySwiper", {
+  direction: "vertical",
+  slidesPerView: 1,
+  spaceBetween: 30,
+  // loop: true,
+  mousewheel: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    type: "bullets"
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev"
+  }
+});
+
+const testBullet = document.querySelectorAll(".swiper-pagination-bullet");
+
+// const menuArray = ["Wtats project", "Whats new", "Whats later", "Links"];
+
+// testBullet.forEach((val, index) => {
+//   const bulletTextWrap = document.createElement("div");
+//   const bulletTextInner = document.createElement("p");
+//   bulletTextInner.textContent = menuArray[index];
+//   bulletTextInner.classList.add("text");
+//   bulletTextWrap.append(bulletTextInner);
+//   bulletTextWrap.classList.add("wrap");
+//   val.append(bulletTextWrap);
+// });
+
+
+/* -----------------------------------Popup----------------------------------
+*/
+const slideContent = document.querySelector(".slideOneTest");
+
+const slide1 = document.querySelector('.slide[aria-label="1 / 4"]')
+
+
+
+const projectRussianTravel = {
+  
+  title: {
+    type: "h2",
+    text: "Проект Russian-travel!",
+    className: "slide__title",
+    parent: "slide__wrapper",
+    position: 'prepend',
+  },
+  subTitleAbout: {
+    type: "p",
+    text: "О чем",
+    className: "slide__subtitle",
+    parent: "slideOne__left-col",
+    position: 'append',
+  },
+  paragraph1: {
+    type: "p",
+    text:
+      "Russian-travel - одностраничный лендинг и моя первая серьезная работа в разработке Веб интерфейсов. В качестве исходных данных был предоставлен макет в Figma для разрешений 320, 768, 1024 и 1280 пикселей.",
+    className: "slide__text",
+    parent: "slideOne__left-col",
+    position: 'append',
+
+  },
+  subTitleTarget: {
+    type: "p",
+    text: "Зачем",
+    className: "slide__subtitle",
+    parent: "slideOne__right-col",
+    position: 'append',
+
+  },
+  paragraph2: {
+    type: "p",
+    text:
+      "Целью задачи было разработать адаптивный сайт который бы одинакого хорошо смотрелся на устройствах размером от большого монитора до маленького телефона.",
+    className: "slide__text",
+    parent: "slideOne__right-col",
+    position: 'append',
+
+  }
+};
+
+
+const allProjects = {
+  projectRussianTravel: projectRussianTravel,
+}
+
+// const createProject = () => {
+
+// }
+
+const createSlide = (data, slideName) => {
+  const slideTemplate = document
+    .querySelector(`.${slideName}`)
+    .content.cloneNode(true);
+
+
+  Object.keys(data).forEach((val) => {
+
+    const elem = createElem(data, val);
+    const elemPosition = data[val]['position'] === 'prepend'
+    ? true
+    : false;
+
+    const parentElemClassName = data[val]["parent"];
+    const parentElem = slideTemplate.querySelector("." + parentElemClassName);
+
+    elemPosition 
+    ? parentElem.prepend(elem)
+    : parentElem.append(elem);
+
+  });
+
+  return slideTemplate;
+};
+
+
+const createElem = (data, val) => {
+  const elemType = data[val]["type"];
+  const elemClass = data[val]["className"];
+  const elemText = data[val]["text"];
+  const newElem = document.createElement(elemType);
+  newElem.classList.add(elemClass);
+  newElem.textContent = elemText;
+
+  return newElem;
+};
+
+const openPopup = (e) => {
+  const slideOne = createSlide(projectRussianTravel, 'slideOne');
+  // const slideTwo
+  // const slideThree
+  // const slideFour
+  const currentProject = e.target.id;
+  const currentProjectData = allProjects[currentProject];
+
+  popup.classList.add("popup_opened");
+
+  body.classList.toggle('body_popup');
+
+
+  slide1.append(slideOne);
+
+};
+
+const closePopup = () => {
+  popup.classList.remove("popup_opened");
+
+  body.classList.toggle('body_popup')
+
+  slide1.innerHTML = "";
+};
+
+
+
+popupOpenButton.addEventListener('click', openPopup)
+popupCloseButton.addEventListener('click', closePopup)
+/* -----------------------------------PopupEnd----------------------------------
+*/

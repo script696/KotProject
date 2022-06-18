@@ -1,6 +1,6 @@
 :root{
   --main-font: "Playfair Display";
-  --second-font: "Bebas Neue";
+  --second-font: "PT Sans";
 
   --color-main: #c73025;
   --color-second: #1c1b20;
@@ -10,3 +10,8 @@
   --color-alternate-text: #fff;
   --color-glowing-text: #fff;
 }
+
+/* PT+Sans 
+
+Bebas Neue
+*/

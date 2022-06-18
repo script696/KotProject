@@ -38,17 +38,32 @@
 }
 
 .header__scroll-marker {
+  height: 10%;
   position: fixed;
-  bottom: 2%;
+  padding: 0 0 30px 0;
+  bottom: 0;
   left: 50%;
+  color: #fff;
   transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  color: var(--color-alternate-text);
+  border: 1px solid red;
+  z-index: 501;
+  cursor: pointer;
 }
+
+.header__scroll-title{
+  position: absolute;
+  left: -33px;
+  top: 0;
+  transform: rotate(270deg);
+  font-size: 0.5rem;
+  width: 100px;
+}
+
+/* .header__arrow{
+  height: 30px;
+  width: 50px;
+  cursor: pointer;
+} */
 
 .header_scrolled .header__scroll-marker {
   display: none;
@@ -115,11 +130,6 @@
 .header__text_color_pink {
   color: #fff;
   font-weight: 800;
-  /* text-shadow:
-      0 0 10px var(--color-glowing-text),
-      0 0 20px var(--color-glowing-text),
-      0 0 40px var(--color-glowing-text),
-      0 0 80px var(--color-glowing-text); */
 }
 
 .header__button-home {

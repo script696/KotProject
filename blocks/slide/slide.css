@@ -1,0 +1,59 @@
+.slide{
+  padding: 2% 5%;
+}
+
+.slide__title{
+  font-family: "Bebas Neue";
+  color: var(--color-main);
+  font-size: 2rem;
+  margin-bottom: 5%;
+  /* line-height: 6.7rem; */
+}
+
+.slide__subtitle{
+  font-family: "Bebas Neue";
+  color: var(--color-main);
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  text-align: center;
+
+}
+
+.slide__text{
+
+}
+
+.slideOne__content{
+display: flex;
+}
+
+.slideOne__left-col{
+  flex: 1 1 auto;
+}
+
+.slideOne__right-col{
+  flex: 1 1 auto;
+}
+
+
+.slide__skills {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-rows: 100px;
+  list-style: none;
+}
+
+.slide__skill {
+  text-align: center;
+  background: #fff;
+}
+.slide__skill p {
+  font-size: .8em;
+  margin-bottom: 6px;
+}
+.slide__skill img{
+  margin: auto;
+  width: 60px;
+  height: 60px;
+}

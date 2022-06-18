@@ -19,3 +19,29 @@ body {
 .body_scrolled{
   overflow-y: auto;
 }
+
+.body_popup {
+  overflow: hidden;
+}
+
+
+@media screen and (max-width: 1200px){
+  html{
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 900px){
+  html{
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 650px){
+  html{
+    font-size: 9px;
+  }
+}
+@media screen and (max-width: 500px){
+  html{
+    font-size: 6.5px;
+  }
+}
