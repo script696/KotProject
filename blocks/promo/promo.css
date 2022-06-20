@@ -2,20 +2,21 @@
   position: relative;
   background: #333;
 
-  padding: 50px 0;
+  /* padding: 50px 0; */
   z-index: 400;
   /* overflow: hidden; */
   /* clip-path: polygon(0% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%); */
-border: 1px solid red;
 }
 
-.promo__test{
+
+.promo__clippy-container{
   height: 100%;
   background: #f8f8f8;
-  /* clip-path: polygon(0% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%); */
+  clip-path: polygon(0% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%);
 }
 
-.promo__container {
+.promo__container{
+  position: relative;
   max-width: 1280px;
   padding: 0 30px;
   margin: auto;
@@ -41,9 +42,9 @@ border: 1px solid red;
 .promo__title {
   margin-bottom: 80px;
   font-family: var(--second-font);
-  color: var(--color-second);
-  font-weight: 400;
-  font-size: 4em;
+  font-weight: 700;
+  color: var(--color-main);
+  font-size: 3.5em;
   line-height: 6.7rem;
   text-align: center;
 }
@@ -58,10 +59,6 @@ border: 1px solid red;
 
 .promo__intersection-contact {
   padding: 0 0 100px 0;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -69,7 +66,7 @@ border: 1px solid red;
 
 .promo__bottom-text {
   font-family: var(--second-font);
-  color: #fff;
+  color: var(--color-main);
   font-size: 2em;
   line-height: 0.8;
   text-align: center;
@@ -106,13 +103,35 @@ border: 1px solid red;
 /* clip-path: polygon(0% 0%, 100% 0, 100% 100%, 50% 100%, 0 100%); */
 
 
-.promo__mask-fake1 {
+.promo__mask-1, .promo__mask-2, .promo__mask-3{
   position: absolute;
-  top: 450px;
-  left: 49%;
+  top: 20px;
+  left: 0;
   width: 100%;
   height: 100%;
-  transform: translateX(-50%);
-  background: var(--color-second);
+  background: #c34943;
   z-index: 401;
+}
+
+.promo__mask-1{
+  transition: all 1s 1s;
+}
+.promo__mask-2{
+  top: 40px;
+  background: #893531;
+  z-index: 401;
+  transition: all 1s 0.5s;
+  
+}
+.promo__mask-3{
+  top: 60px;
+  background: #6e1712;
+  z-index: 401;
+  transition: all 1s;
+}
+
+.promo_hide-mask .promo__mask-1, .promo_hide-mask .promo__mask-2, .promo_hide-mask .promo__mask-3{
+  top: 100%;
+  height: 0;
+
 }

@@ -212,7 +212,7 @@ const projectTuoTown = {
     paragraph1: {
       type: "p",
       text:
-        "Russian-travel - одностраничный лендинг и моя первая серьезная работа в разработке Веб интерфейсов. В качестве исходных данных был предоставлен макет в Figma для разрешений 320, 768, 1024 и 1280 пикселей.",
+        "TuoTown - одностраничный лендинг и мой первый самостоятельный опыт в верстке сайта. В процессе верстки я понял, что макет для десктопа и мобильной версии отличаются контентом, svg графика плохого качества, а некоторые дизайннерские решения весьма неудачные... Это очень отличалось от вылизанного учебного проекта",
       className: "slide__text",
       parent: "slide1__left-col",
       position: 'append',
@@ -229,7 +229,7 @@ const projectTuoTown = {
     paragraph2: {
       type: "p",
       text:
-        "Целью задачи было разработать адаптивный сайт который бы одинакого хорошо смотрелся на устройствах размером от большого монитора до маленького телефона.",
+        "Пока у меня было свободное время от основной учебы я нашел макет в группе https://t.me/maketfigma и решил на нем потренироваться. Интересным и новым для меня было разобраться во всплывающем боковом меню на чистом CSS c применением JavaScript. Потом я понял что на JSе всетаки удобнее..)",
       className: "slide__text",
       parent: "slide1__right-col",
       position: 'append',
@@ -238,46 +238,54 @@ const projectTuoTown = {
   slide2: {
     title: {
       type: "h2",
-      text: "What i learned",
+      text: "Чему новому я научился в данном проекте",
       className: "slide__title",
       parent: "slide__wrapper",
       position: 'prepend',
     },
     item1: {
       type: "li",
-      text: "Элемент списка",
+      text: "Повторение технологий  Flexbox, Grid Layout",
       className: "enumerated-list__item",
       parent: "enumerated-list",
       position: 'append',
     },
     item2: {
       type: "li",
-      text: "Элемент списка",
+      text: "Открытие/закрытие меню с использованием checkbox и соседних селекторов",
       className: "enumerated-list__item",
       parent: "enumerated-list",
       position: 'append',
     },
     item3: {
       type: "li",
-      text: "Элемент списка",
+      text: "Первое использование препроцессора SCSS",
       className: "enumerated-list__item",
       parent: "enumerated-list",
       position: 'append',
     },
     item4: {
       type: "li",
-      text: "Элемент списка",
+      text: "Основы препроцессора - переменные, вложенность",
       className: "enumerated-list__item",
       parent: "enumerated-list",
       position: 'append',
     },
     item5: {
       type: "li",
-      text: "Элемент списка",
+      text: "Развертывание препроцессора с использованием Prepros",
       className: "enumerated-list__item",
       parent: "enumerated-list",
       position: 'append',
     },
+    item6: {
+      type: "li",
+      text: "Фильтры CSS",
+      className: "enumerated-list__item",
+      parent: "enumerated-list",
+      position: 'append',
+    },
+   
   },
   slide3: {
     subTitle: {
@@ -779,7 +787,10 @@ const projectPortfolio = {
 };
 
 const projectLinks = {
-  projectTuoTown: 'https://script696.github.io/russian-travel/',
+  projectRussianTravel: 'https://script696.github.io/russian-travel/',
+  projectTuoTown: 'https://script696.github.io/TuoTown/',
+  projectMesto: 'https://script696.github.io/mesto/',
+  projectPortfolio: 'https://script696.github.io/KotProject/',
 }
 
 const allProjects = {
@@ -789,4 +800,4 @@ const allProjects = {
   projectPortfolio,
 }
 
-export {allProjects}; 
+export {allProjects, projectLinks}; 

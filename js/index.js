@@ -1,4 +1,4 @@
-import { allProjects } from './projectsBase.js'
+import { allProjects, projectLinks } from './projectsBase.js'
 
 const body = document.querySelector('body')
 
@@ -45,6 +45,13 @@ const popupOpenButtons = document.querySelectorAll('.project__popup-open')
 const popupCloseButton = document.querySelector('.popup__close-button')
 /* -----------------------------------------------------------------------------
 */
+
+/* promo
+*/
+
+const promo = document.querySelector('.promo')
+
+
 const addHeaderFullscreen = () => {
   header.classList.add('header_scrolled')
   headerTitle.classList.add('header__title_scrolled')
@@ -135,20 +142,20 @@ const handleProjectMasc = (entries) => {
   });
 }
 
-// const clipPath = (entries) => {
-//   entries.forEach(entry => {
-//     if (entry.isIntersecting) {
-//       console.log(entry)
-//     }
-//   })
-// }
+const handlePromoMasc = (entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      promo.classList.add('promo_hide-mask')
+    }
+  })
+}
 
 const sectionObserver = new IntersectionObserver(cb, { threshold: [0.2, 0.8] });
 const projectObserver = new IntersectionObserver(handleProjectMasc, { threshold: [0.3] });
-// const promoObserver = new IntersectionObserver(clipPath, { threshold: 0.1 });
+const promoObserver = new IntersectionObserver(handlePromoMasc, { threshold: 0.4 });
 
 document.querySelectorAll('section').forEach(sectionElem => sectionObserver.observe(sectionElem));
-// document.querySelectorAll('.promo').forEach(promo => promoObserver.observe(promo));
+document.querySelectorAll('.promo').forEach(promo => promoObserver.observe(promo));
 document.querySelectorAll('.project__insight-mask').forEach(project => projectObserver.observe(project));
 
 /* -----------------------------------------------------------------------------
@@ -221,6 +228,8 @@ const slide2 = document.querySelector('.slide[aria-label="2 / 4"]')
 const slide3 = document.querySelector('.slide[aria-label="3 / 4"]')
 const slide4 = document.querySelector('.slide[aria-label="4 / 4"]')
 
+
+const popupLink = document.querySelector('.popup__link')
 
 
 
@@ -298,18 +307,28 @@ const createElem = (data, val, slideName) => {
   }
 };
 
-const openPopup = (currentProject) => {
+const openPopup = (currentProject, currentProjectName) => {
   const numOfSlides = Object.keys(currentProject).length;
 
   const arraOfSlides = createProject(currentProject, numOfSlides)
 
   popup.classList.add("popup_opened");
 
+  popupLink.href = projectLinks[currentProjectName]
+  
   body.classList.toggle('body_popup');
 
   appendSlides(arraOfSlides, numOfSlides)
 
 };
+
+
+// const fillPopupLink = () => {
+
+// }
+
+
+
 
 const resetSwiper = () => {
   slide1.innerHTML = "";
@@ -333,9 +352,9 @@ const closePopup = () => {
 // popupOpenButton.addEventListener('click', openPopup)
 popupOpenButtons.forEach(button => {
   button.addEventListener('click', (e) => {
-    const currentProject = e.target.id;
-    const currentProjectData = allProjects[currentProject];
-    openPopup(currentProjectData)
+    const currentProjectName = e.target.id;
+    const currentProjectData = allProjects[currentProjectName];
+    openPopup(currentProjectData, currentProjectName)
   });
 })
 popupCloseButton.addEventListener('click', closePopup)
@@ -349,19 +368,4 @@ document.addEventListener('mousedown', (e) => {
 /* -----------------------------------PopupEnd----------------------------------
 */
 
-// const test10 = document.querySelector('.promo__masc')
 
-// const testFoo = (scrollY) => {
-//   let x = 84;
-//   let test = scrollY / 16;
-//   let increment = x + scrollY / 50;
-//   console.log(test)
-//   // test10.style.clipPath = `polygon(0% 0%, 100% 0, 100% 84%, 49% 100%, 0 84%)`
-// }
-
-// window.addEventListener('scroll', () => {
-//   let scrollY = window.scrollY;
-//   if (scrollY > 3600) {
-//     testFoo(scrollY)
-//   }
-// })

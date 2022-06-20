@@ -35,7 +35,7 @@
 .popup__container {
   position: relative;
   z-index: 901;
-  padding: 10px 10px 50px 10px;
+  padding: 10px 10px 70px 10px;
   width: 50%;
   height: 80%;
   background: #ffffff;
@@ -63,10 +63,56 @@
 .popup__close-button{
   position: absolute;
   right: 15px;
-  bottom: 10px;
+  bottom: 20px;
   width: 30px;
   height: 30px;
   background: none;
   border: none;
   cursor: pointer;
+}
+
+.popup__link{
+  position: absolute;
+  bottom: 20px;
+  left: 15px;
+  text-decoration: none;
+  z-index: 9999;
+  color: #000;
+  font-size: 1.3rem;
+}
+
+.popup__link::before{
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  right: 0;
+  width: 0;
+  height: 3px;
+  background: var(--color-second);
+  transition: all .25s cubic-bezier(.694,.048,.335,1);
+
+}
+
+.popup__link::after{
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  right: 0;
+  width: 0;
+  height: 3px;
+  background: var(--color-main);
+  transition: all .25s cubic-bezier(.694,.048,.335,1) .25s ;
+
+}
+
+
+
+.popup__link:hover::before {
+  width: 100%;
+left: 0;
+}
+.popup__link:hover::after{
+  width: 100%;
+  left: 0;
+
 }
