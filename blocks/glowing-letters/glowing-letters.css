@@ -32,7 +32,7 @@
 .glowing-letters {
   margin: 0;
   display: inline-flex;
-  font-family: var(--second-font);
+  font-family: 'Bebas Neue';
 }
 
 .glowing-letters__letter {

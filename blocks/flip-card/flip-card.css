@@ -106,9 +106,7 @@
   font-size: 2rem;
 }
 
-.about__text {
-  color: var(--color-second);
-}
+
 .flip-card__back_pushed {
   transform:  rotateY(0deg);
 }

@@ -1,6 +1,6 @@
 .about {
   background: #f8f8f8;
-  padding: 100px 0 200px 0;
+  padding: 100px 0 100px 0;
 }
 
 .about__container {
@@ -13,12 +13,18 @@
 .about__title {
   position: relative;
   display: inline-block;
-  font-family: "Bebas Neue";
+  font-family: var(--second-font);
+  font-weight: 700;
   color: var(--color-main);
-  font-size: 5.5rem;
+  font-size: 4rem;
   line-height: 6.7rem;
   margin: 0 0 50px 0;
   transform: translateX(-100vw);
+}
+
+.about__text {
+  color: var(--color-second);
+  font-size: 1rem;
 }
 
 .about__left-col {

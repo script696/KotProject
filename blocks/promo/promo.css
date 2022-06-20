@@ -1,9 +1,18 @@
-.promo{
-  height: 500px;
-  background: #c73025;
-  border: 1px solid red;
-  padding: 50px 0;
+.promo {
   position: relative;
+  background: #333;
+
+  padding: 50px 0;
+  z-index: 400;
+  /* overflow: hidden; */
+  /* clip-path: polygon(0% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%); */
+border: 1px solid red;
+}
+
+.promo__test{
+  height: 100%;
+  background: #f8f8f8;
+  /* clip-path: polygon(0% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%); */
 }
 
 .promo__container {
@@ -12,13 +21,16 @@
   margin: auto;
 }
 
-.promo__content{
+.promo__content {
   display: flex;
+  margin-bottom: 80px;
 }
-.promo__left-col{
+
+.promo__left-col {
   flex: 1 1 50%;
 }
-.promo__right-col{
+
+.promo__right-col {
   flex: 1 1 50%;
   display: flex;
   justify-content: center;
@@ -26,33 +38,81 @@
 }
 
 
-.promo__title{
-  font-family: "Bebas Neue";
-  color: var(--color-main-text);
+.promo__title {
+  margin-bottom: 80px;
+  font-family: var(--second-font);
+  color: var(--color-second);
   font-weight: 400;
-  letter-spacing: 2.5px;
   font-size: 4em;
   line-height: 6.7rem;
   text-align: center;
 }
 
-.promo__text{
+.promo__text {
   margin: auto;
   max-width: 80%;
+  font-size: 1.2em;
+  text-align: center;
+  line-height: 2;
 }
 
-.promo__intersection-contact{
+.promo__intersection-contact {
+  padding: 0 0 100px 0;
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
-.promo__bottom-text{
-  font-family: "Bebas Neue";
-  color: var(--color-main-text);
-  font-weight: 400;
-  letter-spacing: 2.5px;
-  font-size: 2.5em;
+
+.promo__bottom-text {
+  font-family: var(--second-font);
+  color: #fff;
+  font-size: 2em;
   line-height: 0.8;
   text-align: center;
+}
+
+.promo__masc{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-main);
+  z-index: 400;
+  clip-path: polygon(0% 0%, 100% 0, 100% 40%, 50% 100%, 0 40%);
+  overflow: hidden;
+}
+
+.promo__download-button{
+  padding: 20px 0;
+  width: 170px;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  color: inherit;
+  background: var(--color-third);
+  text-decoration: none;
+  text-align: center;
+}
+
+/* clip-path: polygon(0% 0%, 100% 0, 100% 84%, 49% 100%, 0 84%); */
+
+/* clip-path: polygon(0% 0%, 100% 0, 100% 100%, 50% 100%, 0 100%); */
+
+
+.promo__mask-fake1 {
+  position: absolute;
+  top: 450px;
+  left: 49%;
+  width: 100%;
+  height: 100%;
+  transform: translateX(-50%);
+  background: var(--color-second);
+  z-index: 401;
 }

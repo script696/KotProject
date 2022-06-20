@@ -1,3 +1,5 @@
+import { allProjects } from './projectsBase.js'
+
 const body = document.querySelector('body')
 
 /* header Elements
@@ -133,10 +135,20 @@ const handleProjectMasc = (entries) => {
   });
 }
 
+// const clipPath = (entries) => {
+//   entries.forEach(entry => {
+//     if (entry.isIntersecting) {
+//       console.log(entry)
+//     }
+//   })
+// }
+
 const sectionObserver = new IntersectionObserver(cb, { threshold: [0.2, 0.8] });
 const projectObserver = new IntersectionObserver(handleProjectMasc, { threshold: [0.3] });
+// const promoObserver = new IntersectionObserver(clipPath, { threshold: 0.1 });
 
 document.querySelectorAll('section').forEach(sectionElem => sectionObserver.observe(sectionElem));
+// document.querySelectorAll('.promo').forEach(promo => promoObserver.observe(promo));
 document.querySelectorAll('.project__insight-mask').forEach(project => projectObserver.observe(project));
 
 /* -----------------------------------------------------------------------------
@@ -211,212 +223,24 @@ const slide4 = document.querySelector('.slide[aria-label="4 / 4"]')
 
 
 
-const projectRussianTravel = {
-  slide1: {
-    title: {
-      type: "h2",
-      text: "Проект Russian-travel!",
-      className: "slide__title",
-      parent: "slide__wrapper",
-      position: 'prepend',
-    },
-    subTitleAbout: {
-      type: "p",
-      text: "О чем",
-      className: "slide__subtitle",
-      parent: "slide1__left-col",
-      position: 'append',
-    },
-    paragraph1: {
-      type: "p",
-      text:
-        "Russian-travel - одностраничный лендинг и моя первая серьезная работа в разработке Веб интерфейсов. В качестве исходных данных был предоставлен макет в Figma для разрешений 320, 768, 1024 и 1280 пикселей.",
-      className: "slide__text",
-      parent: "slide1__left-col",
-      position: 'append',
 
-    },
-    subTitleTarget: {
-      type: "p",
-      text: "Зачем",
-      className: "slide__subtitle",
-      parent: "slide1__right-col",
-      position: 'append',
 
-    },
-    paragraph2: {
-      type: "p",
-      text:
-        "Целью задачи было разработать адаптивный сайт который бы одинакого хорошо смотрелся на устройствах размером от большого монитора до маленького телефона.",
-      className: "slide__text",
-      parent: "slide1__right-col",
-      position: 'append',
-    }
-  },
-  slide2: {
-    title: {
-      type: "h2",
-      text: "What i learned",
-      className: "slide__title",
-      parent: "slide__wrapper",
-      position: 'prepend',
-    },
-    item1: {
-      type: "li",
-      text: "Элемент списка",
-      className: "enumerated-list__item",
-      parent: "enumerated-list",
-      position: 'append',
-    },
-    item2: {
-      type: "li",
-      text: "Элемент списка",
-      className: "enumerated-list__item",
-      parent: "enumerated-list",
-      position: 'append',
-    },
-    item3: {
-      type: "li",
-      text: "Элемент списка",
-      className: "enumerated-list__item",
-      parent: "enumerated-list",
-      position: 'append',
-    },
-    item4: {
-      type: "li",
-      text: "Элемент списка",
-      className: "enumerated-list__item",
-      parent: "enumerated-list",
-      position: 'append',
-    },
-    item5: {
-      type: "li",
-      text: "Элемент списка",
-      className: "enumerated-list__item",
-      parent: "enumerated-list",
-      position: 'append',
-    },
-  },
-  slide3: {
-    subTitle: {
-      type: "p",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia tempore blanditiis quisquam iusto dolores corrupti veniam eos dolorum ut! Earum.",
-      className: "slide__subtitle",
-      parent: "slide__wrapper",
-      position: 'prepend',
-    },
-    title: {
-      type: "h2",
-      text: "What to improve",
-      className: "slide__title",
-      parent: "slide__wrapper",
-      position: 'prepend',
-    },
-    item1: {
-      type: "li",
-      text: "Элемент списка",
-      className: "enumerated-list__item",
-      parent: "enumerated-list",
-      position: 'append',
-    },
-    item2: {
-      type: "li",
-      text: "Элемент списка",
-      className: "enumerated-list__item",
-      parent: "enumerated-list",
-      position: 'append',
-    },
-    item3: {
-      type: "li",
-      text: "Элемент списка",
-      className: "enumerated-list__item",
-      parent: "enumerated-list",
-      position: 'append',
-    },
-  },
-  slide4: {
-
-    subTitle: {
-      type: "p",
-      text: "Lorem ipsum dolor sit amet.",
-      className: "slide__subtitle",
-      parent: "slide__wrapper",
-      position: 'prepend',
-    },
-
-    title: {
-      type: "h2",
-      text: "Skills & Tools",
-      className: "slide__title",
-      parent: "slide__wrapper",
-      position: 'prepend',
-    },
-    
-    html5: {
-      type: "img",
-      text: "HTML5",
-      className: "skill__img",
-      parent: "slide__skills",
-      position: 'append',
-      isImage: 'true',
-      src: './img/svg/html5.svg',
-      alt: 'HTML5 logo',
-    },
-    css3: {
-      type: "img",
-      text: "CSS3",
-      className: "skill__img",
-      parent: "slide__skills",
-      position: 'append',
-      isImage: 'true',
-      src: './img/svg/css3.svg',
-      alt: 'CSS3 logo',
-    },
-    Responsive: {
-      type: "img",
-      text: "Responsive",
-      className: "skill__img",
-      parent: "slide__skills",
-      position: 'append',
-      isImage: 'true',
-      src: './img/svg/responsive.svg',
-      alt: 'Responsive logo',
-    },
-    github: {
-      type: "img",
-      text: "GitHub",
-      className: "skill__img",
-      parent: "slide__skills",
-      position: 'append',
-      isImage: 'true',
-      src: './img/svg/github.svg',
-      alt: 'HTML5 icon',
-    },
-    vscode: {
-      type: "img",
-      text: "VSCode",
-      className: "skill__img",
-      parent: "slide__skills",
-      position: 'append',
-      isImage: 'true',
-      src: './img/svg/vscode.svg',
-      alt: 'HTML5 icon',
-    },
-
+const createProject = (data, numOfSlides) => {
+  let arraOfSlides = [];
+  for (let i = 1; i <= numOfSlides; i++) {
+    const slide = createSlide(data, `slide${i}`);
+    arraOfSlides.push(slide)
   }
-};
-
-
-const allProjects = {
-  projectRussianTravel: projectRussianTravel,
-  projectMesto: projectMesto,
-  projectTuoTown: projectTuoTown,
+  return arraOfSlides;
 }
 
-const createProject = (data) => {
-  const numOfSlides = Object.keys(data)
-
+const appendSlides = (arraOfSlides, numOfSlides) => {
+  for (let i = 1; i <= numOfSlides; i++) {
+    const parentElem = document.querySelector(`.slide[aria-label="${i} / 4"]`);
+    parentElem.append(arraOfSlides[i - 1]);
+  }
 }
+
 
 const createSlide = (data, slideName) => {
   const slideTemplate = document
@@ -475,23 +299,16 @@ const createElem = (data, val, slideName) => {
 };
 
 const openPopup = (currentProject) => {
-  
-  createProject(currentProject)
+  const numOfSlides = Object.keys(currentProject).length;
 
-  const slideOne = createSlide(allProjects[currentProject], 'slide1');
-  const slideTwo = createSlide(allProjects[currentProject], 'slide2');
-  const slideThree = createSlide(allProjects[currentProject], 'slide3');
-  const slideFour = createSlide(allProjects[currentProject], 'slide4');
+  const arraOfSlides = createProject(currentProject, numOfSlides)
 
   popup.classList.add("popup_opened");
 
   body.classList.toggle('body_popup');
 
+  appendSlides(arraOfSlides, numOfSlides)
 
-  slide1.append(slideOne);
-  slide2.append(slideTwo);
-  slide3.append(slideThree);
-  slide4.append(slideFour);
 };
 
 const resetSwiper = () => {
@@ -508,7 +325,7 @@ const closePopup = () => {
   body.classList.toggle('body_popup')
 
   resetSwiper()
- 
+
 };
 
 
@@ -522,5 +339,29 @@ popupOpenButtons.forEach(button => {
   });
 })
 popupCloseButton.addEventListener('click', closePopup)
+
+document.addEventListener('mousedown', (e) => {
+  if (e.target.matches('.popup')) {
+    closePopup()
+  }
+})
+
 /* -----------------------------------PopupEnd----------------------------------
 */
+
+// const test10 = document.querySelector('.promo__masc')
+
+// const testFoo = (scrollY) => {
+//   let x = 84;
+//   let test = scrollY / 16;
+//   let increment = x + scrollY / 50;
+//   console.log(test)
+//   // test10.style.clipPath = `polygon(0% 0%, 100% 0, 100% 84%, 49% 100%, 0 84%)`
+// }
+
+// window.addEventListener('scroll', () => {
+//   let scrollY = window.scrollY;
+//   if (scrollY > 3600) {
+//     testFoo(scrollY)
+//   }
+// })
