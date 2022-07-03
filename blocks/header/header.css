@@ -16,19 +16,31 @@
 }
 
 .header__background {
+  max-width: 1980px;
+  margin: auto;
   position: absolute;
   top: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 100%;
   height: 100%;
   z-index: 500;
   transition: all 1s;
 }
 
+.header__background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+
 .header__background_scrolled {
   opacity: 0;
   visibility: hidden;
 }
+
+
 
 
 .header_scrolled {
@@ -119,7 +131,7 @@
 .header__text {
   font-family: "Playfair Display";
   font-weight: 800;
-  font-size: 1.8rem;
+  font-size: 1.8em;
   color: #fff;
 }
 
@@ -144,14 +156,30 @@
   right: 5%;
 }
 
+
+
+
 @media screen and (max-width: 780px) {
+  .header {
+    justify-content: start;
+    align-items: start;
+  }
+  .header__title{
+    top: 5%;
+  }
+  .header__burger-menu {
+    top: 5%;
+  }
   .header_scrolled{
     background: #000;
+    height: 100%;
+
   }
   .header__nav {
     display: none;
     position: fixed;
     width: 100%;
+    height: 100%;
     top: 80px;
     left: 0;
     justify-content: center;

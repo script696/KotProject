@@ -43,3 +43,14 @@
     top: 0;
   }
 }
+
+@media screen and (max-width: 780px) {
+  .navigation__links {
+    height: 100%;
+    justify-content: center;
+    gap: 10%;
+  }
+  .navigation__link {
+    font-size: 3.5em;
+  }
+}
