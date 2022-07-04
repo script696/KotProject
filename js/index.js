@@ -58,7 +58,6 @@ const addHeaderFullscreen = () => {
   glowingLetter.forEach(letter => letter.classList.add('glowing-letters__letter_scrolled'))
   headerText.forEach(i => i.classList.add('header__text_scrolled'))
   headerNav.classList.add('header__nav_scrolled')
-  // about.scrollIntoView({ block: "start", inline: "nearest" });
   aboutTitle.classList.add('about__title_scrolled')
   aboutTitleUnderline.classList.add('title-about__underline_scrolled')
   videoMasc.classList.add('header__background_scrolled')
