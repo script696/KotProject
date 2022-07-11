@@ -1,10 +1,10 @@
 .promo {
   position: relative;
-  background: #333;
+  background: #000;
 
   /* padding: 50px 0; */
   z-index: 400;
-  /* overflow: hidden; */
+  overflow: hidden;
   /* clip-path: polygon(0% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%); */
 }
 
@@ -12,7 +12,6 @@
 .promo__clippy-container{
   height: 100%;
   background: #f8f8f8;
-  clip-path: polygon(0% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%);
 }
 
 .promo__container{
@@ -82,7 +81,6 @@
   transform: translateX(-50%);
   background: var(--color-main);
   z-index: 400;
-  clip-path: polygon(0% 0%, 100% 0, 100% 40%, 50% 100%, 0 40%);
   overflow: hidden;
 }
 
@@ -98,9 +96,7 @@
   text-align: center;
 }
 
-/* clip-path: polygon(0% 0%, 100% 0, 100% 84%, 49% 100%, 0 84%); */
 
-/* clip-path: polygon(0% 0%, 100% 0, 100% 100%, 50% 100%, 0 100%); */
 
 
 .promo__mask-1, .promo__mask-2, .promo__mask-3{
@@ -134,4 +130,24 @@
   top: 100%;
   height: 0;
 
+}
+.skewOne{
+  position: absolute;
+  bottom: -100%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  transform: skewY(-15deg);
+  transform-origin: top left; 
+}
+.skewTwo{
+  position: absolute;
+  bottom: -100%;
+  right: 50%;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  transform: skewY(15deg);
+  transform-origin: top right; 
 }
