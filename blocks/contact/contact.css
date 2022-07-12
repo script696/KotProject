@@ -13,7 +13,8 @@
 }
 
 .contact__form {
-  flex: 1 1 50%;
+  margin: auto;
+  width: 50%;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -21,7 +22,7 @@
   line-height: 1.42857143;
   color: #333;
   box-sizing: border-box;
-  max-width: 400px;
+  /* max-width: 400px; */
   font-weight: 400;
 }
 
@@ -36,18 +37,14 @@
   letter-spacing: 6px;
 }
 
-/* .contact__textarea {
-  width: 100%;
-  background-color: #000;
-  color: #fff;
-  letter-spacing: 1px;
-} */
 
 .contact__information {
-  flex: 1 1 50%;
+  width: 50%;
+
 }
 
 .contact__list {
+  margin: auto;
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -61,9 +58,10 @@
   line-height: 4;
   color: #aaa;
 }
+
 .contact__input {
   box-sizing: border-box;
-  margin: 0;
+  margin: auto;
   font: inherit;
   font-family: inherit;
   display: block;
@@ -77,7 +75,6 @@
   border-radius: 4px;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-  max-width: 400px;
   background-color: #000;
   color: #fff;
   letter-spacing: 1px;
@@ -85,7 +82,7 @@
 
 .contact__textarea {
   box-sizing: border-box;
-  margin: 0;
+  margin: auto;
   font: inherit;
   overflow: auto;
   font-family: inherit;
@@ -99,7 +96,6 @@
   border-radius: 4px;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-  max-width: 400px;
   background-color: #000;
   color: #fff;
   letter-spacing: 1px;
@@ -117,6 +113,7 @@
   overflow: hidden;
   border-radius: 5px;
 }
+
 .button-contact__text {
   position: absolute;
   top: 50%;
@@ -124,6 +121,7 @@
   transform: translate(-50%, 200%);
   transition: all 0.2s ease-in-out;
 }
+
 .button-contact__icon {
   position: absolute;
   width: 25px;
@@ -136,6 +134,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .contact__button:hover .button-contact__text {
   transform: translate(-50%, -50%);
 }
@@ -147,15 +146,18 @@
 .list-contact__item {
   color: #fff;
 }
+
 .list-contact__text {
   letter-spasing: 2rem;
   font-size: 25px;
   margin: 0 0 0 30px;
 }
+
 .list-contact__link {
   text-decoration: none;
   color: inherit;
 }
+
 .fa-map-marker,
 .fa-phone,
 .fa-envelope,
@@ -250,4 +252,35 @@
 
 .social-media-list li:hover a {
   color: #000;
+}
+
+
+@media screen and (max-width: 780px) {
+  .contact__wrapper {
+    flex-direction: column;
+  }
+
+  .contact__form {
+    width: 70%;
+  }
+
+  .contact__information {
+    width: 100%;
+  }
+
+  .contact__button {
+    height: 50px;
+  }
+
+  .contact__list {
+    max-width: 70%;
+    gap: 50px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .contact__form {
+    width: 100%;
+  }
+
 }
