@@ -5,7 +5,7 @@ const body = document.querySelector('body')
 /* header Elements
 */
 const header = document.querySelector('.header')
-const headerTitle = header.querySelector('.header__title')
+const headerTitle = header.querySelector('.header__content')
 const headerText = header.querySelectorAll('.header__text')
 const headerNav = header.querySelector('.header__nav')
 const headerButton = header.querySelector('.header__button-home')
@@ -54,7 +54,7 @@ const promo = document.querySelector('.promo')
 
 const addHeaderFullscreen = () => {
   header.classList.add('header_scrolled')
-  headerTitle.classList.add('header__title_scrolled')
+  headerTitle.classList.add('header__content_scrolled')
   glowingLetter.forEach(letter => letter.classList.add('glowing-letters__letter_scrolled'))
   headerText.forEach(i => i.classList.add('header__text_scrolled'))
   headerNav.classList.add('header__nav_scrolled')
@@ -69,7 +69,7 @@ const addHeaderFullscreen = () => {
 
 const hideHeaderFullscreen = () => {
   header.classList.remove('header_scrolled')
-  headerTitle.classList.remove('header__title_scrolled')
+  headerTitle.classList.remove('header__content_scrolled')
   glowingLetter.forEach(letter => letter.classList.remove('glowing-letters__letter_scrolled'))
   headerText.forEach(i => i.classList.remove('header__text_scrolled'))
   headerNav.classList.remove('header__nav_scrolled')

@@ -1,3 +1,14 @@
+@keyframes burger{
+  0%{
+    transform: translateY(-50%) translateX(100vw);
+
+  }
+  100%{
+    transform: translateY(-50%) translateX(0);
+  }
+}
+
+
 :root{
   --color-burger: #fff;
 }
@@ -8,10 +19,14 @@
   right: 5%;
   width: 50px;
   height: 40%;
-  transform: translateY(-50%);
+  transform: translateY(-50%) translateX(100vw);
   transition: .5s ease-in-out;
   cursor: pointer;
   display: none;
+}
+
+.header_scrolled .menu-burger{
+  animation: burger 1s ease-in forwards;
 }
 .menu-burger span{
   display: block;

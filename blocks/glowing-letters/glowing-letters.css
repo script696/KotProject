@@ -115,8 +115,19 @@
   --i: 13;
 }
 
-/* @media screen and (max-width: 780px) {
-  .glowing-letters {
-    font-size: 7rem;
+@media screen and (max-width: 780px) {
+  .header_scrolled .glowing-letters__letter_scrolled {
+    font-size: 5rem;
   }
-} */
+
+  .header_scrolled .glowing-letters__letter:not(:nth-child(1), :nth-child(7)) {
+    display: none;
+  }
+  .header_scrolled .glowing-letters__letter:nth-child(7){
+    margin: 0 0 0 5px;
+  }
+
+  /* .glowing-letters__letter:nth-child(1){
+    display: block;
+  } */
+}

@@ -1,7 +1,19 @@
 /* .navigation{
   position: relative;
 } */
+@keyframes marker {
+  0%, 99%{
+    visibility: hidden;
+    opacity: 0;
+    width: 100% !important;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    width: 10% !important;
 
+  }
+}
 .navigation__links {
   display: flex;
   list-style: none;
@@ -42,6 +54,9 @@
     left: 0;
     top: 0;
   }
+
+  .header__nav_visible .navigation__marker{ 
+    animation: marker 0.3s  linear alternate-reverse;
 }
 
 @media screen and (max-width: 780px) {
